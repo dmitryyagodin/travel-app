@@ -49,6 +49,12 @@ import WadiRum from './sights/Jordan/WadiRum.jpg';
 import JerashRuins from './sights/Jordan/JerashRuins.jpg';
 import RomanRuinsInAmman from './sights/Jordan/RomanRuinsInAmman.jpg';
 import WadiMujib from './sights/Jordan/WadiMujib.jpg';
+import ArenalVolcanoNationalPark from './sights/CostaRica/ArenalVolcanoNationalPark.jpg';
+import CorcovadoNationalPark from './sights/CostaRica/CorcovadoNationalPark.jpg';
+import TamarindoPlayaLangostaPlayaGrande from './sights/CostaRica/TamarindoPlayaLangostaPlayaGrande.jpg';
+import ManuelAntonioManuelAntonioNationalPark from './sights/CostaRica/ManuelAntonioManuelAntonioNationalPark.jpg';
+import MonteverdeCloudForestReserve from './sights/CostaRica/MonteverdeCloudForestReserve.jpg';
+import Matapalo from './sights/CostaRica/Matapalo.jpg';
 
 export const Countries: Array<CountryItem> = [
   {
@@ -391,39 +397,39 @@ export const Countries: Array<CountryItem> = [
     sights: [
       {
         id: 1,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: ArenalVolcanoNationalPark,
+        sightName: 'Arenal Volcano National Park & La Fortuna',
+        description: 'Used to be one of the most active volcanoes in Costa Rica, the beautiful Arenal is indeed a sight to behold.Visit La Fortuna, a tiny town near the base of the volcano and you will not regret the sheer beauty.'
       },
       {
         id: 2,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: CorcovadoNationalPark,
+        sightName: 'Corcovado National Park & Drake Bay',
+        description: 'Located on the gorgeous Osa Peninsula, the Corcovado National Park has been called as one of the most biodiverse places on earth.Together with Drake Bay, this region has become an ecotourism hot spot for those who want to be one with nature.'
       },
       {
         id: 3,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: TamarindoPlayaLangostaPlayaGrande,
+        sightName: 'Tamarindo, Playa Langosta & Playa Grande',
+        description: 'Located along the north Pacific Coast, Tamarindo and its surrounding beaches are some of the most easily accessible beach towns in the region.Boasting crystal clear turquoise water and pristine weather, Tamarindo is one of the most popular tourist destinations for good reason.'
       },
       {
         id: 4,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: ManuelAntonioManuelAntonioNationalPark,
+        sightName: 'Manuel Antonio & Manuel Antonio National Park',
+        description: 'What this park lacks in size, it makes up for in the incredible wealth of attractions found here.Stunning tropical beaches, an amazing array of birds and wildlife, rich dense forestation, easy accessibility and a plethora of things to do, all make this park one of the most popular tourist attractions in the country.'
       },
       {
         id: 5,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: MonteverdeCloudForestReserve,
+        sightName: 'Monteverde Cloud Forest Reserve',
+        description: 'Shrouded in clouds, the stunning Monteverde Cloud Forest Reserve has a unique air of mystery to it.A distinctive mountain rainforest where the humidity is usually 100%, Monteverde is home to more than 3,000 species of animals and plants.'
       },
       {
         id: 6,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: Matapalo,
+        sightName: 'Matapalo',
+        description: 'Matapalo is a small, laid-back beach village located at the tip of the Osa Peninsula in the southern portion of Puntarenas, filled with small cabinas and eco friendly bungalows that prompts guests to enjoy an all-encompassing experience with nature.'
       },
     ]
   }
