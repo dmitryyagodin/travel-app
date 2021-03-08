@@ -25,6 +25,12 @@ import PlazaDeArmas from './sights/Peru/PlazaDeArmas.jpg';
 import Kuelap from './sights/Peru/Kuelap.jpg';
 import CordilleraBlanca from './sights/Peru/CordilleraBlanca.jpg';
 import Sacsayhuaman from './sights/Peru/Sacsayhuaman.jpg';
+import GrosMorneNationalPark from './sights/Canada/GrosMorneNationalPark.jpg';
+import CalgaryStampede from './sights/Canada/CalgaryStampede.jpg';
+import VictoriasInnerHarbour from './sights/Canada/VictoriasInnerHarbour.jpg';
+import BayOfFundy from './sights/Canada/BayOfFundy.jpg';
+import AthabascaFalls from './sights/Canada/AthabascaFalls.jpg';
+import NiagaraFallsOntario from './sights/Canada/NiagaraFallsOntario.jpg';
 
 export const Countries: Array<CountryItem> = [
   {
@@ -179,39 +185,39 @@ export const Countries: Array<CountryItem> = [
     sights: [
       {
         id: 1,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: GrosMorneNationalPark,
+        sightName: 'Gros Morne National Park',
+        description: 'Gros Morne National Park in Newfoundland is important to the world, geologically, because the ancient rocks help people understand how the oceans and continents were created. The park is a nature lover’s paradise featuring lowlands along the Gulf of St. Lawrence and the alpine setting of the Long Range Mountains.'
       },
       {
         id: 2,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: CalgaryStampede,
+        sightName: 'Calgary Stampede',
+        description: 'The Calgary Stampede, one of the most famous rodeos in the world, traces its origins back to the traveling wild west shows of the late 1800s and early 1900s. The Stampede has grown over the years, today attracting the best cowboys in the world who compete for $2 million in prize money.'
       },
       {
         id: 3,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: VictoriasInnerHarbour,
+        sightName: 'Victorias Inner Harbour',
+        description: 'Victoria’s Inner Harbour on Vancouver Island is a cool place to visit. There’s the water on one side and stately government buildings on the other since Victoria is the capital of British Columbia. The city hosts a classic boat festival on Labour Day in September, with the harbor filling up with wooden boats.'
       },
       {
         id: 4,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: BayOfFundy,
+        sightName: 'Bay of Fundy',
+        description: 'The Bay of Fundy, located on the Atlantic coast in eastern Canada, is famous for its high tidal range. Because of the unique shape of the bay, the difference in water level between high tide and low tide can be as much as 16 meters (52 feet).'
       },
       {
         id: 5,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: AthabascaFalls,
+        sightName: 'Athabasca Falls',
+        description: 'Jasper National Park in the Alberta province is the largest of Canada’s Rocky Mountain Parks boasting broad valleys, rugged mountains, glaciers, forests, alpine meadows and wild rivers. One of the top attractions is Athabasca Falls, a beautiful waterfall that thunders through a narrow gorge.'
       },
       {
         id: 6,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: NiagaraFallsOntario,
+        sightName: 'Niagara Falls, Ontario',
+        description: 'Many Americans think of Niagara Falls as being only a waterfall in the United States, namely New York, when in actuality, Niagara Falls is three falls on the border between the United States and Canada. Horseshoe Falls is the largest falls and is located mainly on the Canadian side, while the smaller American and Bridal Veil falls are mostly on the U.S. side.'
       },
     ]
   },
