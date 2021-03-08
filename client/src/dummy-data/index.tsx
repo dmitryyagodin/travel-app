@@ -31,6 +31,12 @@ import VictoriasInnerHarbour from './sights/Canada/VictoriasInnerHarbour.jpg';
 import BayOfFundy from './sights/Canada/BayOfFundy.jpg';
 import AthabascaFalls from './sights/Canada/AthabascaFalls.jpg';
 import NiagaraFallsOntario from './sights/Canada/NiagaraFallsOntario.jpg';
+import Svartifoss from './sights/Iceland/Svartifoss.jpg';
+import BreidavikBeach from './sights/Iceland/BreidavikBeach.jpg';
+import Seljalandsfoss from './sights/Iceland/Seljalandsfoss.jpg';
+import Askja from './sights/Iceland/Askja.jpg';
+import Hallgrimskirkja from './sights/Iceland/Hallgrimskirkja.jpg';
+import Laugavegur from './sights/Iceland/Laugavegur.jpg';
 
 export const Countries: Array<CountryItem> = [
   {
@@ -232,39 +238,39 @@ export const Countries: Array<CountryItem> = [
     sights: [
       {
         id: 1,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: Svartifoss,
+        sightName: 'Svartifoss',
+        description: 'Framed by black basalt hexagonal columns that hang down like the pipes of a giant organ, Svartifoss is one of Iceland’s most unusual looking waterfalls. Its name, which means Black Falls, comes from these dark columns. Svartifoss is located in the Vatnajokull National Park in southeast Iceland'
       },
       {
         id: 2,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: BreidavikBeach,
+        sightName: 'Breidavik Beach',
+        description: 'Breidavik Beach is, arguably, Iceland’s most beautiful beach. It boasts pretty turquoise blue waters, rugged cliffs that have been carved by glaciers and a wide stretch of golden sand. It is a lovely area to go camping or to explore on an ATV as it is not a huge tourist destination'
       },
       {
         id: 3,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: Seljalandsfoss,
+        sightName: 'Seljalandsfoss',
+        description: 'Seljalandsfoss is one of Iceland’s most popular waterfalls. Part of its popularity is probably due to the fact that visitors can actually walk behind this waterfall — a unique, perhaps once-in-a-lifetime opportunity for most. One word of warning — the path behind the falls is closed during the winter months'
       },
       {
         id: 4,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: Askja,
+        sightName: 'Askja',
+        description: 'Askja is a huge caldera that is located in the Dyngjufjoll Mountains. It is a popular day tour that takes approximately 11 to 14 hours in total to complete. To reach Askja, visitors must first travel through Odadahraun, which is Iceland’s biggest desert.'
       },
       {
         id: 5,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: Hallgrimskirkja,
+        sightName: 'Hallgrimskirkja',
+        description: 'It is hard to miss Hallgrimskirkja if you’re in Reykjavik. The church stands on the top of a hill, and its tower is 73 meters (244 feet) tall. Hallgrimskirkja was designed by the state architect Gudjon Samuelsson, who was inspired by Iceland’s amazing landscape, including its basalt lava flows, glaciers and mountains.'
       },
       {
         id: 6,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: Laugavegur,
+        sightName: 'Laugavegur',
+        description: 'One of the best ways to get to know Iceland is by foot on the Laugavegur. At 79 km (49 miles), Laugavegur is Iceland’s longest hiking trail, stretching from Landmannalaugar to Skogar. This popular trail takes hikers through some of this country’s most gorgeous scenery and past geysers, glaciers, hot springs and waterfalls.'
       },
     ]
   },
