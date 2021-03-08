@@ -43,6 +43,12 @@ import CaboGirao from './sights/Portugal/CaboGirao.jpg';
 import SaoJorgeCastle from './sights/Portugal/SaoJorgeCastle.jpg';
 import ObidosCastle from './sights/Portugal/ObidosCastle.jpg';
 import BelemTower from './sights/Portugal/BelemTower.jpg';
+import Petra from './sights/Jordan/Petra.jpg';
+import DeadSea from './sights/Jordan/DeadSea.jpg';
+import WadiRum from './sights/Jordan/WadiRum.jpg';
+import JerashRuins from './sights/Jordan/JerashRuins.jpg';
+import RomanRuinsInAmman from './sights/Jordan/RomanRuinsInAmman.jpg';
+import WadiMujib from './sights/Jordan/WadiMujib.jpg';
 
 export const Countries: Array<CountryItem> = [
   {
@@ -338,39 +344,39 @@ export const Countries: Array<CountryItem> = [
     sights: [
       {
         id: 1,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: Petra,
+        sightName: 'Petra',
+        description: 'Prepare to be amazed by Petra. One of the New7Wonders of the World, this attraction has wowed modern-day visitors since the long-lost citys rediscovery by Swiss explorer Jean Louis Burckhardt more than 200 years ago.'
       },
       {
         id: 2,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: DeadSea,
+        sightName: 'Dead Sea',
+        description: 'Floating in the Dead Sea is a quintessential thing to do in Jordan. The lowest point on Earth accessible by road, this body of water is located at 418 meters below sea level. It practically glows an intense shade of aquamarine — a particularly striking sight next to salt-encrusted rock ledges and barren red mountains in the background.'
       },
       {
         id: 3,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: WadiRum,
+        sightName: 'Wadi Rum',
+        description: 'Head to the southern region of Jordan, and youll be treated to one of the most spectacular landscapes across the globe: Wadi Rum. Also known as the Valley of the Moon, this sandstone and granite rock valley is an otherworldly experience, with towering cliffs, massive dunes, swirling archways, and caverns. It served as the set for much of the 1962 film Lawrence of Arabia and was tagged a UNESCO World Heritage Site in 2011.'
       },
       {
         id: 4,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: JerashRuins,
+        sightName: 'Jerash Ruins',
+        description: 'Nothing feels more like traveling back in time than visiting the Jerash ruins. Its one of the worlds best-preserved ancient Roman cities and features spectacular places to visit, from colonnaded avenues and temples to a massive sports arena that once had a seating capacity of 15,000 spectators.'
       },
       {
         id: 5,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: RomanRuinsInAmman,
+        sightName: 'Roman Ruins in Amman',
+        description: 'You dont have to go all the way to Petra to see fantastic archeological sites in Jordan. In fact, the capital Amman (where youll probably arrive from abroad) is home to a variety of fascinating ruins, many of which are within short walking distance from one another.'
       },
       {
         id: 6,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: WadiMujib,
+        sightName: 'Wadi Mujib',
+        description: 'Stretching from the Desert Highway around 70 kilometers to the Dead Sea, Wadi Mujib is Jordans answer to Americas Grand Canyon. The river canyon, which is four kilometers wide and one kilometer deep, offers nature lovers the chance to explore unique scenery and see a plethora of wildlife, including Egyptian vultures, Nubian ibex, striped hyena, and the Syrian wolf.'
       },
     ]
   },
