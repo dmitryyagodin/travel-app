@@ -19,6 +19,12 @@ import Gjirokaster from './sights/Albania/Gjirokaster.jpg';
 import Tirana from './sights/Albania/Tirana.jpg';
 import LlogaraPass from './sights/Albania/LlogaraPass.jpg';
 import Berat from './sights/Albania/Berat.jpg';
+import IncaPisac from './sights/Peru/IncaPisac.jpg';
+import Moray from './sights/Peru/Moray.jpg';
+import PlazaDeArmas from './sights/Peru/PlazaDeArmas.jpg';
+import Kuelap from './sights/Peru/Kuelap.jpg';
+import CordilleraBlanca from './sights/Peru/CordilleraBlanca.jpg';
+import Sacsayhuaman from './sights/Peru/Sacsayhuaman.jpg';
 
 export const Countries: Array<CountryItem> = [
   {
@@ -126,39 +132,39 @@ export const Countries: Array<CountryItem> = [
     sights: [
       {
         id: 1,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: IncaPisac,
+        sightName: 'Inca Pisac',
+        description: 'Spread out on the mountains above the bustling colonial village of Pisac are several impressive Inca ruins known as Inca Pisac. The ruins include a military citadel, religious temples, and individual dwellings, and overlooks the Sacred Valley. It is thought that Inca Písac defended the southern entrance to the valley and controlled a route which connected the Inca Empire with the border of the rain forest'
       },
       {
         id: 2,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: Moray,
+        sightName: 'Moray',
+        description: 'Reached through the small town of Maras, Moray is an Inca site consisting of several enormous terraces carved into a huge earthen bowl. Each layer has its own micro-climate, according to how deep into the bowl it is. The temperature difference between the top and the bottom is as much as 15 °C (27 °F). For this reason, some theorize that the Incas used them as a kind of laboratory to determine the optimal conditions for growing crops of each species.'
       },
       {
         id: 3,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: PlazaDeArmas,
+        sightName: 'Plaza de Armas, Lima',
+        description: 'The Plaza de Armas is where the city of Lima was born. Also known as the Plaza Mayor, it is the heart of the city, located in its historic district, with streets radiating out in a grid. The location was picked by the Spanish conquistador Francisco Pizarro in 1535. Today the plaza is flanked by a cathedral and several palaces'
       },
       {
         id: 4,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: Kuelap,
+        sightName: 'Kuelap',
+        description: 'Kuelap combines ancient ruins with a cloud forest and the Amazon River. Kuelap is an ancient walled city built by the Chachapoyans, also known as the Cloud People, who lived where the Amazon carved a valley deeper than the Grand Canyon in the Andes. The fortress at Kuelap is the largest one in South America and pre-dates the Incas. Orchids and bromeliads grow inside the fortress.'
       },
       {
         id: 5,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: CordilleraBlanca,
+        sightName: 'Cordillera Blanca',
+        description: 'Cordillera Blanca is a mountain adventurer’s dream, offering hiking, climbing and mountain biking. Located in northern Peru, it has 16 peaks more than 6,000 meters (19,000 feet) high, earning it the nickname of “the highest tropical mountain range in the world.” Part of the Andes, Peru’s highest mountain, Huascaran, is located here. Cordillera Blanca also is a good place to see ruins of pre-Inca cultures.'
       },
       {
         id: 6,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: Sacsayhuaman,
+        sightName: 'Sacsayhuaman',
+        description: 'Sacsayhuaman is an ancient walled complex overlooking Cusco. The Incas built Cusco in the shape of a puma, which was one of their symbols, with Sacsayhuaman as its head. Sacsayhuaman is considered one of man’s greatest building feats. The fortress walls were built with huge boulders that dwarf humans; pieces were cut to fit so mortar wasn’t needed. The foundations can be seen today'
       },
     ]
   },
