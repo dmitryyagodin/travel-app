@@ -13,6 +13,12 @@ import PlazaMayor from './sights/Cuba/PlazaMayor.jpg';
 import Fusterlandia from './sights/Cuba/Fusterlandia.jpg';
 import FabricaDeArteCubano from './sights/Cuba/FabricaDeArteCubano.jpg';
 import OldSquare from './sights/Cuba/OldSquare.jpg';
+import AlbanianRiviera from './sights/Albania/AlbanianRiviera.jpg';
+import BunkArtInTirana from './sights/Albania/BunkArt.jpg';
+import Gjirokaster from './sights/Albania/Gjirokaster.jpg';
+import Tirana from './sights/Albania/Tirana.jpg';
+import LlogaraPass from './sights/Albania/LlogaraPass.jpg';
+import Berat from './sights/Albania/Berat.jpg';
 
 export const Countries: Array<CountryItem> = [
   {
@@ -73,39 +79,39 @@ export const Countries: Array<CountryItem> = [
     sights: [
       {
         id: 1,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: AlbanianRiviera,
+        sightName: 'Albanian Riviera',
+        description: 'The Albanian Riviera is, with the capital city Tirana, the most popular place in the country. The reason is that it is just amazing: long sandy and pebble beaches lapped by turquoise water, and lovely coastal hamlets with small Orthodox churches, cobblestoned streets and flowers everywhere. The best places to visit are Dhërmi, Drymades beach, Vuno, Qeparo and the seaside town of Himara.'
       },
       {
         id: 2,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: BunkArtInTirana,
+        sightName: 'BunkArt in Tirana',
+        description: 'Tirana is one of the liveliest capitals of the Balkan Peninsula, with plenty of museums and art galleries that are worth a visit. Once in town, don’t miss the BunkArt, a majestic coveted bunker built in the outskirts of the town in the 70s by the former dictator Enver Hoxha. It is the perfect place to visit if you want to learn more about the Communist history of Albania.'
       },
       {
         id: 3,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: Gjirokaster,
+        sightName: 'The UNESCO town of Gjirokastër',
+        description: 'One of the most stunning destinations in Albania and the Balkans is Gjirokastër. This town is located in the south of the country and, for its unique Ottoman architecture, has been included in the heritage sites by UNESCO. Gjirokastër is home to one of the most beautiful castles in the country, which offers spectacular views over the city.'
       },
       {
         id: 4,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: Tirana,
+        sightName: 'Tirana',
+        description: 'The capital city of Albania, Tirana will be the starting point for many people exploring the best places in Albania.'
       },
       {
         id: 5,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: LlogaraPass,
+        sightName: 'Llogara Pass',
+        description: 'The Llogara Pass is one of Albania’s most famous places, with the road providing one of the most spectacular drives in the whole world.'
       },
       {
         id: 6,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: Berat,
+        sightName: 'Berat',
+        description: 'Berat is in the middle of Albania and it is believed to be one of the country’s oldest towns. Berat is often known by its nickname – the City of a Thousand Windows – due to its mix of Ottoman and Albanian architecture.'
       },
     ]
   },
