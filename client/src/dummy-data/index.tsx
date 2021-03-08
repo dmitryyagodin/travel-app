@@ -7,6 +7,12 @@ import Iceland from './countries/iceland.jpg';
 import Portugal from './countries/portugal.jpg';
 import Jordan from './countries/jordan.jpg';
 import CostaRica from './countries/сostarica.jpg';
+import OldHavana from './sights/Cuba/OldHavana.jpg';
+import BayOfPigs from './sights/Cuba/BayOfPigs.jpg';
+import PlazaMayor from './sights/Cuba/PlazaMayor.jpg';
+import Fusterlandia from './sights/Cuba/Fusterlandia.jpg';
+import FabricaDeArteCubano from './sights/Cuba/FabricaDeArteCubano.jpg';
+import OldSquare from './sights/Cuba/OldSquare.jpg';
 
 export const Countries: Array<CountryItem> = [
   {
@@ -20,39 +26,39 @@ export const Countries: Array<CountryItem> = [
     sights: [
       {
         id: 1,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: OldHavana,
+        sightName: 'Old Havana',
+        description: 'Bohemian, rhythmically Latin, certainly picturesque and, above all, charming.'
       },
       {
         id: 2,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: BayOfPigs,
+        sightName: 'BayOfPigs',
+        description: 'The Bahia de Cochinos is, of course, where the U.S. staged a failed invasion of Cuba.'
       },
       {
         id: 3,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: PlazaMayor,
+        sightName: 'Plaza Mayor',
+        description: 'Being the central square in Trinidad, it i9s surrounded by interesting and attractive buildings in various styles. There is so0me seating in the square.'
       },
       {
         id: 4,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: Fusterlandia,
+        sightName: 'Fusterlandia',
+        description: 'Artist Jose Fuster has created a magical, colourful, dream-like house covered entirely with his ceramic and tile art and magnificent architecture and includes some of the surrounding streets and entrances to the neighborhood homes. '
       },
       {
         id: 5,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: FabricaDeArteCubano,
+        sightName: 'Fabrica De Arte Cubano',
+        description: 'The F.A.C., Cuban Art Factory, located on the 26 and 11 in Vedado, is the best night cultural proposal in La Havana. There is always something new to do, theater, jazz, contemporary dance, concerts, DJs, exhibitions or intranet chatting. The best of all, all of this can take place in one night, while taking a glass of wine and eating delicious tapas. Visit this place, a new Oxygen in Havana!'
       },
       {
         id: 6,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: OldSquare,
+        sightName: 'Old Square (Plaza Vieja)',
+        description: 'What is now called the Old Square was originally Plaza Nueva (New Square), built as a popular alternative to Plaza de Armas, the military and government nerve center. Later called Plaza del Mercado (Market Square) as Havanas commercial hub, Plaza Vieja was the site of executions, processions, bullfights, and fiestas -- all witnessed by Havanas wealthiest citizens, who looked on from their balconies. The original Carrara marble fountain surrounded by four dolphins was demolished in the 1930s when President Gerardo Machado (1871-1939) built an underground parking lot here. Today the squares surrounding structures vary wildly in condition, though all of them are noteworthy.'
       },
     ]
   },
