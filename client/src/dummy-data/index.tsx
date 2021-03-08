@@ -37,6 +37,12 @@ import Seljalandsfoss from './sights/Iceland/Seljalandsfoss.jpg';
 import Askja from './sights/Iceland/Askja.jpg';
 import Hallgrimskirkja from './sights/Iceland/Hallgrimskirkja.jpg';
 import Laugavegur from './sights/Iceland/Laugavegur.jpg';
+import AlcobacaMonastery from './sights/Portugal/AlcobacaMonastery.jpg';
+import UniversityOfCoimbra from './sights/Portugal/UniversityOfCoimbra.jpg';
+import CaboGirao from './sights/Portugal/CaboGirao.jpg';
+import SaoJorgeCastle from './sights/Portugal/SaoJorgeCastle.jpg';
+import ObidosCastle from './sights/Portugal/ObidosCastle.jpg';
+import BelemTower from './sights/Portugal/BelemTower.jpg';
 
 export const Countries: Array<CountryItem> = [
   {
@@ -285,39 +291,39 @@ export const Countries: Array<CountryItem> = [
     sights: [
       {
         id: 1,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: AlcobacaMonastery,
+        sightName: 'Alcobaca Monastery',
+        description: 'The Alcobaça Monastery is a Roman Catholic Monastery located in the town of Alcobaça, in central Portugal. It was founded by the first Portuguese King, Afonso Henriques, in 1153, and maintained a close association with the Kings of Portugal throughout its history.'
       },
       {
         id: 2,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: UniversityOfCoimbra,
+        sightName: 'University of Coimbra',
+        description: 'The University of Coimbra is one of the oldest, continuous universities in Europe, having been established in 1290. It also is one of the largest universities in Portugal, with approximately 20,000 students. There are many sections of interest within the university complex.'
       },
       {
         id: 3,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: CaboGirao,
+        sightName: 'Cabo Girao',
+        description: 'Cabo Girão is located in the southern coast of Madeira, in the Portuguese archipelago with the same name. At 570 meters (1,870 feet), the cliff is often referred to as the highest sea cliff in Europe but at least three European cliffs are higher.'
       },
       {
         id: 4,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: SaoJorgeCastle,
+        sightName: 'Sao Jorge Castle',
+        description: 'The São Jorge Castle is one of the top tourist attractions in Lisbon as it can be seen from all over the city. It dates back to Roman times, though the Moors rebuilt the fortifications in the 10th century. The castle was freed from Moorish rule in 1147 during the Siege of Lisbon in the Second Crusade.'
       },
       {
         id: 5,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: ObidosCastle,
+        sightName: 'Obidos Castle',
+        description: 'Obidos Castle is an impressive structure that sits on a hill at Obidos, a small city that dates back to Roman times on Portugal’s Atlantic coast. The Moors built the castle sometime in the eighth century.'
       },
       {
         id: 6,
-        picture: '',
-        sightName: '',
-        description: ''
+        picture: BelemTower,
+        sightName: 'Belem Tower',
+        description: 'Belem Tower, also known as the Tower of St. Vincent, sits on what once was an island in the Tagus River in Lisbon, the capital of Portugal. Dating back to 1515, the imposing tower was built both to defend Lisbon from invaders and to welcome the city’s friends.'
       },
     ]
   },
