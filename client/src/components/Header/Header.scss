@@ -1,6 +1,13 @@
+header {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .header {
   display: flex;
-  background-color: rgba(0, 0, 0, 0.3);
+  justify-content: space-between;
   padding: 20px 10px;
-  justify-content: space-around;
+  &__logo {
+    font-size: 26px;
+    color: salmon;
+  }
 }
