@@ -12,7 +12,6 @@ const App: React.FC = () => {
           <MainLayout>
             <Switch>
               <Route path="/allcountries" component={Home} />
-              <Route path="/login" />
               <Redirect from='/' to='/allcountries'/>
             </Switch>
           </MainLayout>

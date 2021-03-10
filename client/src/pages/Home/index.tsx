@@ -1,17 +1,32 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import { HomeSlides } from '../HomeSlides';
 import './Home.scss';
 import { Countries } from '../../dummy-data/index';
+import { CountryItem } from '../../interfaces/interfaces';
 
 export const Home: React.FC = () => {
+  const [searchResults, setSearchResults] = useState<CountryItem[]>([]);
+  const searchItem: string = '';
+
+  useEffect(() => {
+    if(searchItem !== '') {
+      const results = Countries.filter((country: CountryItem) =>
+        country.countryName.toLowerCase().includes(searchItem.toLowerCase())
+      );
+      setSearchResults(results);
+    }
+    else {
+      setSearchResults(Countries);
+    }
+    }, [searchItem]);
 
   return (
     <div className="container-xl">
       {/* <HomeSlides /> */}
       <div className='card-field'>
-        {Countries
-        .map((element, index) => {
+        {searchResults
+        .map((element: CountryItem, index) => {
           return (
             <div
               className="card"
