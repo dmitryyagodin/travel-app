@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import { Home } from './pages/Home';
 import { MainContext } from './context/MainContext';
 import { MainLayout } from './components/MainLayout';
@@ -11,7 +11,8 @@ const App: React.FC = () => {
         <div className="App">
           <MainLayout>
             <Switch>
-              <Route path="/" component={Home} />
+              <Route path="/allcountries" component={Home} />
+              <Redirect from='/' to='/allcountries'/>
             </Switch>
           </MainLayout>
         </div>

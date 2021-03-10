@@ -24,7 +24,7 @@ export const MainContext = ({ children }) => {
   const [user] = useAuthState(auth)
   const homePage = {
     title: 'Home Page',
-    subtitle: 'Trave App',
+    subtitle: 'Travel App',
   }
   return (
     <Context.Provider value={{ homePage, user, firebase, auth, firestore }}>

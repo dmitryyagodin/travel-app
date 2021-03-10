@@ -8,28 +8,27 @@ export const HomeSlides: React.FC = () => {
     "https://by3301files.storage.live.com/y4mSKtPDCQ2kqSimdaovOMC0zq6AQxi1LFr8e8o67JI6mU9AwlQWCz9ICwv-nQwuKUlthQZmuccJcjO8sNEmBD2qunBj99mHoCGn_FwPHXL9-FC13VQTfnZney5KTrzersHk7oWjD583kbu0fZYF64T4cKi7-9CtYf42Shzhl0dKp72ZsminiaKdQsply2Su9DX?width=1024&height=576&cropmode=none"
   ]
   const [slide, setSlide] = useState(0);
-  
+
   useEffect(() => {
     const slider = setInterval(() => {
       setSlide(slide < 2 ? slide + 1 : slide - 2);
     }, 4000);
     return () => clearInterval(slider);
   });
-  
+
 
   console.log(slideUrls[slide]);
 
   return (
     <div className="slides-container">
-      <div className="">
-       <img src={slideUrls[slide]} alt="travel"/>
-      </div>
+      {/* <div className=""> */}
+        <img src={slideUrls[slide]} alt="travel"/>
+      {/* </div> */}
       <div className="slide-dots">
-        <span className={slide === 0 ? 'dot active' : 'dot'}></span> 
-        <span className={slide === 1 ? 'dot active' : 'dot'}></span> 
+        <span className={slide === 0 ? 'dot active' : 'dot'}></span>
+        <span className={slide === 1 ? 'dot active' : 'dot'}></span>
         <span className={slide === 2 ? 'dot active' : 'dot'}></span>
       </div>
     </div>
   )
 }
-
