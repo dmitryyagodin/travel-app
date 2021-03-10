@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import { Context } from '../../context/MainContext';
 import { HomeSlides } from '../HomeSlides';
 import './Home.scss';
 import { Countries } from '../../dummy-data/index';
 import { CountryItem } from '../../interfaces/interfaces';
 
 export const Home: React.FC = () => {
+  const { user } = React.useContext(Context)
   const [searchResults, setSearchResults] = useState<CountryItem[]>([]);
   const searchItem: string = '';
 
@@ -24,6 +26,7 @@ export const Home: React.FC = () => {
   return (
     <div className="container-xl">
       {/* <HomeSlides /> */}
+      {user && <h1>Hello, {user.displayName}</h1>}
       <div className='card-field'>
         {searchResults
         .map((element: CountryItem, index) => {
