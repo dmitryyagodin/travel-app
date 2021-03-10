@@ -15,7 +15,7 @@ const Context = React.createContext({})
 export const MainContext = ({ children }) => {
   const homePage = {
     title: 'Home Page',
-    subtitle: 'Trave App',
+    subtitle: 'Travel App',
   }
   return (
     <Context.Provider value={{ homePage }}>
