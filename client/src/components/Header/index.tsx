@@ -11,14 +11,13 @@ import './Header.scss'
 export const Header: React.FC = () => {
   const { user } = React.useContext(Context)
   return (
-    <header className="header">
-      <Link to="/allcountries" className="header-link">Travel App</Link>
-      <SearchPanel />
-      <SelectLang />
+    <header>
       <div className="header">
         <div className="header__logo">
-          Travel APP
+          <Link to="/allcountries" className="header__logo link">Travel App</Link>
         </div>
+        <SearchPanel />
+        <SelectLang />
         <div className="header__sign">
           {user ? <SignOut /> : <SignIn />}
         </div>

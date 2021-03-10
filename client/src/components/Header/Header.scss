@@ -4,10 +4,15 @@ header {
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 20px 10px;
+
   &__logo {
-    font-size: 26px;
-    color: salmon;
+    width: 20%;
+
+    .link {
+      font-size: 26px;
+      color: salmon;
+    }
   }
 }
