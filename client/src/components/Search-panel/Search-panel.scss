@@ -2,3 +2,21 @@
   width: 50%;
   margin-right: 10px;
 }
+
+.input-reset {
+  position: relative;
+  display: flex;
+}
+
+
+.close-icon {
+  color: rgb(122, 117, 117);
+  position: absolute;
+  right: 2%;
+  top: 15%;
+}
+
+.close-icon:hover {
+  cursor: pointer;
+  color: rgb(46, 51, 51);
+}

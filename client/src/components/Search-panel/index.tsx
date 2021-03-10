@@ -8,8 +8,11 @@ export const SearchPanel: React.FC = () => {
     setSearchItem(e.target.value);
   }
 
+  const handleResetInput = () => setSearchItem('');
+
   return (
     <div className="input-group search-input">
+      <div className="input-reset">
       <input
         type="text"
         className="form-control"
@@ -19,6 +22,8 @@ export const SearchPanel: React.FC = () => {
         value={searchItem}
         onChange={handleSearchItem}
       />
+      <span className="close-icon" onClick={handleResetInput}>&#10006;</span>
+      </div>
       <button
         className="btn btn-outline-secondary"
         type="button"
