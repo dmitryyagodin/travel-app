@@ -1,8 +1,9 @@
-import React from 'react'
-import firebase from 'firebase'
-import 'firebase/auth'
-import 'firebase/firestore'
-import { useAuthState } from 'react-firebase-hooks/auth'
+import React from 'react';
+import { useLocation } from "react-router-dom";
+import firebase from 'firebase';
+import 'firebase/auth';
+import 'firebase/firestore';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 var firebaseConfig = {
   apiKey: "AIzaSyA65k6MEJoBJlYG3MY7iosoGuHUb1gkimk",
@@ -27,13 +28,16 @@ firestore.collection('countries').doc('data').get().then(doc => {
 })
 
 export const MainContext = ({ children }) => {
-  const [user] = useAuthState(auth)
+  const [user] = useAuthState(auth);
+  const location = useLocation();
+
   const homePage = {
     title: 'Home Page',
     subtitle: 'Travel App',
   }
+
   return (
-    <Context.Provider value={{ homePage, user, firebase, auth, firestore }}>
+    <Context.Provider value={{ homePage, user, firebase, auth, firestore, location }}>
       {children}
     </Context.Provider>
   )

@@ -14,3 +14,19 @@ export interface CountryItem {
   video: string;
   sights: Array<SightItem>
 }
+
+export interface Params {
+  country: string;
+}
+
+export interface SearchPanelDataItem {
+  handleSearchFromParent: any;
+}
+
+export interface HeaderDataItem {
+  handleSearchValue: any;
+}
+
+export interface HomeItem {
+  searchValue: string;
+}
