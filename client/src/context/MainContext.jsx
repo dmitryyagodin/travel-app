@@ -20,6 +20,12 @@ export const Context = React.createContext()
 const auth = firebase.auth()
 const firestore = firebase.firestore()
 
+firestore.collection('countries').doc('data').get().then(doc => {
+  if (doc.exists) {
+    console.log(doc.data());
+  }
+})
+
 export const MainContext = ({ children }) => {
   const [user] = useAuthState(auth)
   const homePage = {
