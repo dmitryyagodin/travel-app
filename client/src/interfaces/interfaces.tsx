@@ -14,3 +14,7 @@ export interface CountryItem {
   video: string;
   sights: Array<SightItem>
 }
+
+export interface Params {
+  country: string;
+}

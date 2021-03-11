@@ -39,7 +39,14 @@ export const Home: React.FC = () => {
               <div className="card-body">
                 <h5 className="card-title">{element.countryName}</h5>
                 <p className="card-text">Capital: {element.capitalName}</p>
-                <Link to="/allcountries" className="header-link">See details</Link>
+                <Link
+                  to={{
+                    pathname: `/allcountries/:${element.countryName}`,
+                  }}
+                  className="header-link"
+                >
+                  See details
+                </Link>
               </div>
             </div>
           );
