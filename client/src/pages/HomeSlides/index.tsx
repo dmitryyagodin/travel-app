@@ -16,9 +16,6 @@ export const HomeSlides: React.FC = () => {
     return () => clearInterval(slider);
   });
 
-
-  console.log(slideUrls[slide]);
-
   return (
     <div className="slides-container">
       {/* <div className=""> */}

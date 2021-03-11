@@ -1,15 +1,16 @@
 import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { Context } from '../../context/MainContext';
 import { HomeSlides } from '../HomeSlides';
 import './Home.scss';
 import { Countries } from '../../dummy-data/index';
 import { CountryItem } from '../../interfaces/interfaces';
+import { HomeItem } from '../../interfaces/interfaces';
 
-export const Home: React.FC = () => {
+export const Home: React.FC<HomeItem> = (props) => {
   const { user } = React.useContext(Context)
   const [searchResults, setSearchResults] = useState<CountryItem[]>([]);
-  const searchItem: string = '';
+  const searchItem: string = props.searchValue;
 
   useEffect(() => {
     if(searchItem !== '') {

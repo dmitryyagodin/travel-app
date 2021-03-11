@@ -5,7 +5,7 @@ import {Params} from "../../interfaces/interfaces";
 import { Countries } from '../../dummy-data/index';
 import { CountryItem } from '../../interfaces/interfaces';
 
-export const CountryDetails: React.FC = () => {
+export const CountryDetails: React.FC = (props) => {
   const history = useHistory();
   let { country } = useParams() as Params;
   country = country.replace(":", "");

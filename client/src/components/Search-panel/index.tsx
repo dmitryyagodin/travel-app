@@ -1,14 +1,23 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Search-panel.scss'
+import {SearchPanelDataItem} from "../../interfaces/interfaces";
 
-export const SearchPanel: React.FC = () => {
+export const SearchPanel: React.FC<SearchPanelDataItem> = (props) => {
   const [searchItem, setSearchItem] = useState('');
+
+  const handleSubmitSearch = (e: { preventDefault: () => void; }) => {
+    props.handleSearchFromParent(searchItem);
+  }
 
   const handleSearchItem = (e: {target: { value: React.SetStateAction<string>; }}): void => {
     setSearchItem(e.target.value);
   }
 
   const handleResetInput = () => setSearchItem('');
+
+  useEffect(() => {
+    props.handleSearchFromParent(searchItem);
+  });
 
   return (
     <div className="input-group search-input">
@@ -28,6 +37,7 @@ export const SearchPanel: React.FC = () => {
         className="btn btn-outline-secondary"
         type="button"
         id="button-addon2"
+        onClick={handleSubmitSearch}
       >
         Search
       </button>
