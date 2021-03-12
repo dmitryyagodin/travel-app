@@ -15,7 +15,8 @@ export const Home: React.FC<HomeItem> = (props) => {
   useEffect(() => {
     if(searchItem !== '') {
       const results = Countries.filter((country: CountryItem) =>
-        country.countryName.toLowerCase().includes(searchItem.toLowerCase())
+        country.countryName.toLowerCase().includes(searchItem.toLowerCase()) ||
+        country.capitalName.toLowerCase().includes(searchItem.toLowerCase())
       );
       setSearchResults(results);
     }
