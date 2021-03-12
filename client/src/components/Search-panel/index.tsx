@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './Search-panel.scss'
-import {SearchPanelDataItem} from "../../interfaces/interfaces";
+import { SearchPanelDataItem } from "../../interfaces/interfaces";
+import searchIcon from '../../assets/icons/search.svg'
 
 export const SearchPanel: React.FC<SearchPanelDataItem> = (props) => {
   const [searchItem, setSearchItem] = useState('');
@@ -9,7 +10,7 @@ export const SearchPanel: React.FC<SearchPanelDataItem> = (props) => {
     props.handleSearchFromParent(searchItem);
   }
 
-  const handleSearchItem = (e: {target: { value: React.SetStateAction<string>; }}): void => {
+  const handleSearchItem = (e: { target: { value: React.SetStateAction<string>; } }): void => {
     setSearchItem(e.target.value);
   }
 
@@ -22,25 +23,25 @@ export const SearchPanel: React.FC<SearchPanelDataItem> = (props) => {
   return (
     <div className="input-group search-input">
       <div className="input-reset">
-      <input
-        type="text"
-        className="form-control"
-        placeholder="Type to search"
-        aria-label="Type to search"
-        aria-describedby="button-addon2"
-        value={searchItem}
-        onChange={handleSearchItem}
-      />
-      <span className="close-icon" onClick={handleResetInput}>&#10006;</span>
+        <img src={searchIcon} alt="" />
+        <input
+          type="text"
+          placeholder="Type to search"
+          aria-label="Type to search"
+          aria-describedby="button-addon2"
+          value={searchItem}
+          onChange={handleSearchItem}
+        />
+        <span className="close-icon" onClick={handleResetInput}>&#10006;</span>
       </div>
-      <button
+      {/* <button
         className="btn btn-outline-secondary"
         type="button"
         id="button-addon2"
         onClick={handleSubmitSearch}
       >
         Search
-      </button>
+      </button> */}
     </div>
   )
 }
