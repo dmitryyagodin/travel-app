@@ -16,6 +16,10 @@ export const Header: React.FC<HeaderDataItem> = (props) => {
     props.handleSearchValue(searchValue);
   }
 
+  const handleLang = (langValue: string) => {
+    props.handleLangValue(langValue);
+  }
+
   return (
     <header>
       <div className="header">
@@ -25,7 +29,7 @@ export const Header: React.FC<HeaderDataItem> = (props) => {
         {isSearchHidden ?
           <SearchPanel handleSearchFromParent={handleSearch}/> :
         null}
-        <SelectLang />
+        <SelectLang handleLangFromParent={handleLang}/>
         <div className="header__sign">
           {user ? <SignOut /> : <SignIn />}
         </div>

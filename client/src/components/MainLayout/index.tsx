@@ -7,7 +7,7 @@ export const MainLayout: React.FC = ({ children }) => {
 
   return (
     <>
-      <Header handleSearchValue={''}/>
+      <Header handleSearchValue={''} handleLangValue={''}/>
       <div className="body">
         {children}
       </div>

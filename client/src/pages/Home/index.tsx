@@ -11,6 +11,7 @@ export const Home: React.FC<HomeItem> = (props) => {
   const { user } = React.useContext(Context)
   const [searchResults, setSearchResults] = useState<CountryItem[]>([]);
   const searchItem: string = props.searchValue;
+  const langItem: string = props.langValue;
 
   useEffect(() => {
     if(searchItem !== '') {

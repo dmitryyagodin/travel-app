@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './Search-panel.scss'
-import {SearchPanelDataItem} from "../../interfaces/interfaces";
+import { SearchPanelDataItem } from "../../interfaces/interfaces";
 
 export const SearchPanel: React.FC<SearchPanelDataItem> = (props) => {
   const [searchItem, setSearchItem] = useState('');

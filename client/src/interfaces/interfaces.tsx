@@ -4,15 +4,25 @@ export interface SightItem {
   sightName: string;
   description: string;
 }
-export interface CountryItem {
-  id: number;
-  picture: any;
+
+export interface LangItem {
   countryName: string;
   capitalName: string;
   lang: string;
   description: string;
+  sights: Array<SightItem>;
+}
+
+export interface Languages {
+  en: LangItem;
+  ru: LangItem;
+  es: LangItem;
+}
+export interface CountryItem {
+  id: number;
+  picture: any;
   video: string;
-  sights: Array<SightItem>
+  translateTo: Languages;
 }
 
 export interface Params {
@@ -25,8 +35,14 @@ export interface SearchPanelDataItem {
 
 export interface HeaderDataItem {
   handleSearchValue: any;
+  handleLangValue: any;
 }
 
 export interface HomeItem {
   searchValue: string;
+  langValue: string;
+}
+
+export interface SelectLangDataItem {
+  handleLangFromParent: any;
 }
