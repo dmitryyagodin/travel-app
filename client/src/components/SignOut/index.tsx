@@ -5,7 +5,7 @@ export const SignOut: React.FC = () => {
   const { auth } = React.useContext(Context)
   return (
     <>
-    <a href="/" className="mr-3">
+    <a href="/" className="mr-3 text-white">
       Профиль
     </a>
       <button
