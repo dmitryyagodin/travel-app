@@ -117,7 +117,7 @@ export const Admin: React.FC<AdminProps> = () => {
   }
 
   return (
-    <div className="container-xl pb-4" onChange={changeHandler}>
+    <div className="container-xl pb-4 admin" onChange={changeHandler}>
       <h1>Добавить страну</h1>
       <label htmlFor="name_ru">Навазние на русском</label>
       <input type="text" id="name_ru" placeholder="Название RU" />
