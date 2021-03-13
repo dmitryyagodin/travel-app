@@ -44,20 +44,11 @@ export const SearchPanel: React.FC<SearchPanelDataItem> = (props) => {
   return (
     <div className="input-group search-input">
       <div className="input-reset">
-      <input
-        type="text"
-        className="form-control"
-        placeholder={placeholderValue}
-        aria-label="Type to search"
-        aria-describedby="button-addon2"
-        value={searchItem}
-        onChange={handleSearchItem}
-      />
-      <span className="close-icon" onClick={handleResetInput}>&#10006;</span>
         <img src={searchIcon} alt="" />
         <input
           type="text"
-          placeholder="Type to search"
+          className="form-control"
+          placeholder={placeholderValue}
           aria-label="Type to search"
           aria-describedby="button-addon2"
           value={searchItem}
