@@ -25,17 +25,26 @@ export interface CountryItem {
   translateTo: Languages;
 }
 
+export interface ResultCountryItem {
+  id: number,
+  countryName: string,
+  capitalName: string,
+  picture: string;
+}
+
 export interface Params {
-  country: string;
+  id: string;
 }
 
 export interface SearchPanelDataItem {
   handleSearchFromParent: any;
+  langValue: string;
 }
 
 export interface HeaderDataItem {
   handleSearchValue: any;
   handleLangValue: any;
+  langValue: string;
 }
 
 export interface HomeItem {
@@ -43,6 +52,28 @@ export interface HomeItem {
   langValue: string;
 }
 
+export interface DetailsItem {
+  langValue: string;
+}
+
+export interface ResultCountryDetailItem {
+  countryName: string,
+  capitalName: string,
+  picture: string;
+}
+
 export interface SelectLangDataItem {
   handleLangFromParent: any;
+}
+
+export interface FooterItem {
+  langValue: string;
+}
+
+export interface SignInItem {
+  langValue: string;
+}
+
+export interface SignOutItem {
+  langValue: string;
 }

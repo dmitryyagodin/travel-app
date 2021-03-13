@@ -32,19 +32,25 @@ const App: React.FC = () => {
           <Header
             handleSearchValue={handleSearchValueToHomePage}
             handleLangValue={handleLangValueToHomePage}
+            langValue={langValue}
             />
             <Switch>
               <Route
                 path="/allcountries"
                 exact
                 render={(props) => (
-                  <Home {...props} searchValue={searchValue} langValue={langValue}/>
+                  <Home {...props} searchValue={searchValue} langValue={langValue} />
                 )}
               />
-              <Route path="/allcountries/:country" component={CountryDetails} />
+              <Route
+                path="/allcountries/:id"
+                render={(props) => (
+                  <CountryDetails {...props} langValue={langValue} />
+                )}
+              />
               <Redirect from='/' to='/allcountries'/>
             </Switch>
-          <Footer />
+          <Footer langValue={langValue} />
         </div>
       </MainContext>
     </Router>

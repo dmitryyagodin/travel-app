@@ -7,11 +7,11 @@ export const MainLayout: React.FC = ({ children }) => {
 
   return (
     <>
-      <Header handleSearchValue={''} handleLangValue={''}/>
+      {/* <Header />
       <div className="body">
         {children}
       </div>
-      <Footer />
+      <Footer /> */}
     </>
   )
 }
