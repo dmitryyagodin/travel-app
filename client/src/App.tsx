@@ -12,6 +12,7 @@ import { MainLayout } from './components/MainLayout';
 import { CountryDetails } from './components/CountryDetails';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
+import { Admin } from './pages/Admin';
 
 const App: React.FC = () => {
   const [searchValue, setSearchValue] = useState('');
@@ -24,7 +25,8 @@ const App: React.FC = () => {
     <Router>
       <MainContext>
         <div className="App">
-          <Header handleSearchValue={handleSearchValueToHomePage}/>
+          <Header handleSearchValue={handleSearchValueToHomePage} />
+          <div className="body">
             <Switch>
               <Route
                 path="/allcountries"
@@ -34,8 +36,10 @@ const App: React.FC = () => {
                 )}
               />
               <Route path="/allcountries/:country" component={CountryDetails} />
-              <Redirect from='/' to='/allcountries'/>
+              {/* <Redirect from='/' to='/allcountries'/> */}
+              <Route path="/admin" component={Admin} />
             </Switch>
+          </div>
           <Footer />
         </div>
       </MainContext>
