@@ -26,6 +26,9 @@ export const SignOut: React.FC<SignOutItem> = (props) => {
 
   return (
     <>
+    <a href="/" className="mr-3 text-white">
+      Профиль
+    </a>
       <button
         className="btn btn-danger"
         onClick={() => auth.signOut()}

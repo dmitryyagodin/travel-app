@@ -1,18 +1,27 @@
+@import "../../../node_modules/bootswatch/dist/yeti/variables";
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 header {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: $primary;
 }
 
 .header {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: 20px 10px;
 
   &__logo {
     width: 20%;
-
+    font-family: 'Indie Flower', cursive;
+    
     .link {
-      font-size: 26px;
-      color: salmon;
+      color: $secondary;
+      font-size: 34px;
     }
+  }
+
+  &__sign {
+    display: flex;
+    align-items: center;
   }
 }

@@ -74,34 +74,36 @@ export const Home: React.FC<HomeItem> = (props) => {
   }, [searchItem, langItem]);
 
   return (
-    <div className="container-xl">
-      {/* <HomeSlides /> */}
-      {user && <h1>Hello, {user.displayName}</h1>}
-      <div className='card-field'>
-        {searchResults
-        .map((element, index) => {
-          return (
-            <div
-              className="card"
-              key={index}
-            >
-              <img src={element.picture} className="card-img-top" alt={element.countryName} />
-              <div className="card-body">
-                <h5 className="card-title">{element.countryName}</h5>
-                <p className="card-text">{capitalValue}: {element.capitalName}</p>
-                <Link
-                  to={{
-                    pathname: `/allcountries/:${element.id}`,
-                  }}
-                  className="header-link"
+    <>
+      <HomeSlides />
+      <div className="container-xl">
+        {user && <h1>Hello, {user.displayName}</h1>}
+        <div className='card-field'>
+          {searchResults
+            .map((element, index) => {
+              return (
+                <div
+                  className="card"
+                  key={index}
                 >
-                  {linkValue}
-                </Link>
-              </div>
-            </div>
-          );
-        })}
+                  <img src={element.picture} className="card-img-top" alt={element.countryName} />
+                  <div className="card-body">
+                    <h5 className="card-title">{element.countryName}</h5>
+                    <p className="card-text">{capitalValue}: {element.capitalName}</p>
+                    <Link
+                      to={{
+                        pathname: `/allcountries/:${element.id}`,
+                      }}
+                      className="header-link"
+                    >
+                      {linkValue}
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
       </div>
-    </div>
+    </>
   )
 }

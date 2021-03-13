@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Search-panel.scss'
 import { SearchPanelDataItem } from "../../interfaces/interfaces";
 import { HeaderData } from '../../assets/translations/header-data';
+import searchIcon from '../../assets/icons/search.svg'
 
 export const SearchPanel: React.FC<SearchPanelDataItem> = (props) => {
   const langItem: string = props.langValue;
@@ -13,7 +14,7 @@ export const SearchPanel: React.FC<SearchPanelDataItem> = (props) => {
     props.handleSearchFromParent(searchItem);
   }
 
-  const handleSearchItem = (e: {target: { value: React.SetStateAction<string>; }}): void => {
+  const handleSearchItem = (e: { target: { value: React.SetStateAction<string>; } }): void => {
     setSearchItem(e.target.value);
   }
 
@@ -53,8 +54,18 @@ export const SearchPanel: React.FC<SearchPanelDataItem> = (props) => {
         onChange={handleSearchItem}
       />
       <span className="close-icon" onClick={handleResetInput}>&#10006;</span>
+        <img src={searchIcon} alt="" />
+        <input
+          type="text"
+          placeholder="Type to search"
+          aria-label="Type to search"
+          aria-describedby="button-addon2"
+          value={searchItem}
+          onChange={handleSearchItem}
+        />
+        <span className="close-icon" onClick={handleResetInput}>&#10006;</span>
       </div>
-      <button
+      {/* <button
         className="btn btn-outline-secondary"
         type="button"
         id="button-addon2"
@@ -62,6 +73,8 @@ export const SearchPanel: React.FC<SearchPanelDataItem> = (props) => {
       >
         {searcBtnValue}
       </button>
+        Search
+      </button> */}
     </div>
   )
 }
