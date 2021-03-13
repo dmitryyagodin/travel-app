@@ -38,7 +38,7 @@ export const SearchPanel: React.FC<SearchPanelDataItem> = (props) => {
         setPlaceholderValue(HeaderData.searchPlaceholder.en);
         setSearcBtnValue(HeaderData.searchButton.en);
     }
-  }, [langItem]);
+  }, [langItem, props, searchItem]);
 
   return (
     <div className="input-group search-input">

@@ -4,18 +4,18 @@ import {
   Route,
   Switch,
   Redirect,
-  // useLocation
 } from "react-router-dom";
 import { Home } from './pages/Home';
 import { MainContext } from './context/MainContext';
-import { MainLayout } from './components/MainLayout';
+// import { MainLayout } from './components/MainLayout';
 import { CountryDetails } from './components/CountryDetails';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
+import SaveLangState from './utils/saveLangState';
 
 const App: React.FC = () => {
   const [searchValue, setSearchValue] = useState('');
-  const [langValue, setLangValue] = useState('en');
+  const [langValue, setLangValue] = SaveLangState('langValue', 'en');
 
   const handleSearchValueToHomePage = (searchValue: string) => {
     setSearchValue(searchValue);

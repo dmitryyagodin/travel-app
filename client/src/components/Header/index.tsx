@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import './Header.scss';
 import { SearchPanel } from '../Search-panel/index';
@@ -7,16 +7,17 @@ import { Context } from '../../context/MainContext';
 import { SignIn } from '../SignIn';
 import { SignOut } from '../SignOut';
 import { HeaderDataItem } from "../../interfaces/interfaces";
+import SaveLangState from '../../utils/saveLangState';
 
 export const Header: React.FC<HeaderDataItem> = (props) => {
   const { user, location } = React.useContext(Context);
   const isSearchHidden = location.pathname.split("/allcountries")[1] === "";
   const langItem: string = props.langValue;
-  const [langValue, setLangValue] = useState(langItem);
+  const [langValue, setLangValue] = SaveLangState('langValue', langItem);
 
   useEffect(() => {
     setLangValue(langItem);
-  }, [langItem]);
+  }, [langItem, setLangValue]);
 
   const handleSearch = (searchValue: string) => {
     props.handleSearchValue(searchValue);

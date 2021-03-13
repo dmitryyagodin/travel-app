@@ -1,9 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect } from 'react';
 import './Select-lang.scss';
 import { SelectLangDataItem } from "../../interfaces/interfaces";
+import SaveLangState from '../../utils/saveLangState';
 
 export const SelectLang: React.FC<SelectLangDataItem> = (props) => {
-  const [selectedLang, setSelectedLang] = useState('en');
+  const [selectedLang, setSelectedLang] = SaveLangState('langValue', 'en');
 
   const handleChangeLang = (e: {
     target: { value: React.SetStateAction<string>; }
