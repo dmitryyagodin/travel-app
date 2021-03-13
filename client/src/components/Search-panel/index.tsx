@@ -47,7 +47,6 @@ export const SearchPanel: React.FC<SearchPanelDataItem> = (props) => {
         <img src={searchIcon} alt="" />
         <input
           type="text"
-          className="form-control"
           placeholder={placeholderValue}
           aria-label="Type to search"
           aria-describedby="button-addon2"
