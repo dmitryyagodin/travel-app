@@ -19,20 +19,18 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
   const [btnValue, setBtnValue] = useState('Back to main page');
   const [capitalValue, setCapitalValue] = useState('Capital');
   const langItem: string = props.langValue;
-  const [sliderImages, setSliderImges] = React.useState([])
+  const [sliderImages, setSliderImges] = useState([] as any)
   let { id } = useParams() as Params;
   id = id.replace(":", "");
-  console.log(countryDetail);
 
   const handleBackClick = () => {
     history.push("/allcountries");
   }
-  console.log(sliderImages);
 
   useEffect(() => {
     const resultsAfterSwitch: CountryItem = Countries
       .find(item => item.id.toString() === id) || {} as CountryItem;
-    resultsAfterSwitch.translateTo.en.sights.map((el: any) => setSliderImges((prev) => [...prev, el.picture]))
+    resultsAfterSwitch.translateTo.en.sights.forEach((el: any) => setSliderImges((prev: any) => [...prev, el.picture]));
 
     switch (langItem) {
       case 'en':
