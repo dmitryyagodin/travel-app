@@ -12,6 +12,7 @@ import { CountryDetails } from './components/CountryDetails';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import SaveLangState from './utils/saveLangState';
+import { Admin } from './pages/Admin';
 
 const App: React.FC = () => {
   const [searchValue, setSearchValue] = useState('');
@@ -34,6 +35,8 @@ const App: React.FC = () => {
             handleLangValue={handleLangValueToHomePage}
             langValue={langValue}
             />
+          {/* <Header handleSearchValue={handleSearchValueToHomePage} /> */}
+          {/* <div className="body"> */}
             <Switch>
               <Route
                 path="/allcountries"
@@ -48,10 +51,14 @@ const App: React.FC = () => {
                   <CountryDetails {...props} langValue={langValue} />
                 )}
               />
-              <Redirect from='/' to='/allcountries'/>
+              <Route path="/allcountries/:country" component={CountryDetails} />
+              {/* <Redirect from='/' to='/allcountries'/> */}
+              <Route path="/admin" component={Admin} />
             </Switch>
-          <Footer langValue={langValue} />
-        </div>
+          </div>
+          <Footer 
+            langValue={langValue}/>
+        {/* </div> */}
       </MainContext>
     </Router>
   );

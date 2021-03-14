@@ -17,19 +17,30 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 export const Context = React.createContext()
+export const fire = firebase
 
 const auth = firebase.auth()
 const firestore = firebase.firestore()
 
-firestore.collection('countries').doc('data').get().then(doc => {
-  if (doc.exists) {
-    console.log(doc.data());
-  }
-})
+
 
 export const MainContext = ({ children }) => {
   const [user] = useAuthState(auth);
   const location = useLocation();
+  const [countries, setCountries] = React.useState([])
+
+  React.useEffect(() => {
+    firestore.collection("countries")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => setCountries(prev => [...prev, doc.data().data]));
+      })
+      .catch((error) => {
+        console.log("Error getting documents: ", error);
+      });
+  }, [])
+  
+  console.log(countries);
 
   const homePage = {
     title: 'Home Page',
