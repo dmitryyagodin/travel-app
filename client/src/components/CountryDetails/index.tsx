@@ -72,14 +72,18 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
   return (
     <div>
       <ScrollToTopOnMount />
-      <button onClick={handleBackClick}>
+      <button
+        className="btn btn-primary"
+        type="button"
+        onClick={handleBackClick}
+      >
         {btnValue}
       </button>
       <div className="card-body">
         <h5 className="card-title">{countryDetail.countryName}</h5>
         <p className="card-text">{capitalValue}: {countryDetail.capitalName}</p>
       </div>
-      <CountryMap />
+      <CountryMap countryId={id} language={langItem}/>
     </div>
   )
 }

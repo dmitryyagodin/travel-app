@@ -93,3 +93,8 @@ export interface SignInItem {
 export interface SignOutItem {
   langValue: string;
 }
+
+export interface CountryMapItem {
+  countryId: string;
+  language: string;
+}

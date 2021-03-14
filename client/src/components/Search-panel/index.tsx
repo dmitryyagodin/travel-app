@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Search-panel.scss'
 import { SearchPanelDataItem } from "../../interfaces/interfaces";
 import { HeaderData } from '../../assets/translations/header-data';
 import searchIcon from '../../assets/icons/search.svg'
 
 export const SearchPanel: React.FC<SearchPanelDataItem> = (props) => {
+  const inputRef = useRef<HTMLInputElement>(null);
   const langItem: string = props.langValue;
   const [searchItem, setSearchItem] = useState('');
   const [placeholderValue, setPlaceholderValue] = useState('Type to search');
@@ -21,6 +22,9 @@ export const SearchPanel: React.FC<SearchPanelDataItem> = (props) => {
   const handleResetInput = () => setSearchItem('');
 
   useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
     props.handleSearchFromParent(searchItem);
     switch(langItem) {
       case 'en':
@@ -52,10 +56,11 @@ export const SearchPanel: React.FC<SearchPanelDataItem> = (props) => {
           aria-describedby="button-addon2"
           value={searchItem}
           onChange={handleSearchItem}
+          ref={inputRef}
         />
         <span className="close-icon" onClick={handleResetInput}>&#10006;</span>
       </div>
-      {/* <button
+      <button
         className="btn btn-outline-secondary"
         type="button"
         id="button-addon2"
@@ -63,8 +68,6 @@ export const SearchPanel: React.FC<SearchPanelDataItem> = (props) => {
       >
         {searcBtnValue}
       </button>
-        Search
-      </button> */}
     </div>
   )
 }
