@@ -40,8 +40,6 @@ export const MainContext = ({ children }) => {
       });
   }, [])
 
-  console.log(countries);
-
   const homePage = {
     title: 'Home Page',
     subtitle: 'Travel App',
