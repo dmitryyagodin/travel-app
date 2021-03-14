@@ -9,6 +9,7 @@ import {
   ResultCountryDetailItem
 } from '../../interfaces/interfaces';
 import { DetailsData } from '../../assets/translations/details-data';
+import { ScrollToTopOnMount } from '../ScrollToTopOnMount/ScrollToTopOnMount';
 
 export const CountryDetails: React.FC<DetailsItem> = (props) => {
   const history = useHistory();
@@ -69,6 +70,7 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
 
   return (
     <div>
+      <ScrollToTopOnMount />
       <button onClick={handleBackClick}>
         {btnValue}
       </button>
