@@ -34,9 +34,8 @@ const App: React.FC = () => {
             handleSearchValue={handleSearchValueToHomePage}
             handleLangValue={handleLangValueToHomePage}
             langValue={langValue}
-            />
-          {/* <Header handleSearchValue={handleSearchValueToHomePage} /> */}
-          {/* <div className="body"> */}
+          />
+          <div className="body">
             <Switch>
               <Route
                 path="/allcountries"
@@ -51,14 +50,13 @@ const App: React.FC = () => {
                   <CountryDetails {...props} langValue={langValue} />
                 )}
               />
-              <Route path="/allcountries/:country" component={CountryDetails} />
-              {/* <Redirect from='/' to='/allcountries'/> */}
               <Route path="/admin" component={Admin} />
+              <Redirect from='/' to='/allcountries'/>
             </Switch>
           </div>
-          <Footer 
+          <Footer
             langValue={langValue}/>
-        {/* </div> */}
+        </div>
       </MainContext>
     </Router>
   );
