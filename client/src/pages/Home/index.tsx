@@ -6,10 +6,20 @@ import './Home.scss';
 import { Countries } from '../../dummy-data/index';
 import { CountryItem } from '../../interfaces/interfaces';
 
+<<<<<<< Updated upstream
 export const Home: React.FC = () => {
   const { user } = React.useContext(Context)
   const [searchResults, setSearchResults] = useState<CountryItem[]>([]);
   const searchItem: string = '';
+=======
+export const Home: React.FC<HomeItem> = (props) => {
+  const { countries } = React.useContext(Context)
+  const [searchResults, setSearchResults] = useState<ResultCountryItem[]>([]);
+  const [linkValue, setLinkValue] = useState('See details');
+  const [capitalValue, setCapitalValue] = useState('Capital');
+  const searchItem: string = props.searchValue;
+  const langItem: string = props.langValue;
+>>>>>>> Stashed changes
 
   useEffect(() => {
     if(searchItem !== '') {
@@ -24,6 +34,7 @@ export const Home: React.FC = () => {
     }, [searchItem]);
 
   return (
+<<<<<<< Updated upstream
     <div className="container-xl">
       {/* <HomeSlides /> */}
       {user && <h1>Hello, {user.displayName}</h1>}
@@ -31,6 +42,13 @@ export const Home: React.FC = () => {
         {searchResults
         .map((element: CountryItem, index) => {
           return (
+=======
+    <>
+      <HomeSlides />
+      <div className="container-xl">
+        <div className='card-field'>
+          {countries.map((el: CountryItemFirebase, index: any) => (
+>>>>>>> Stashed changes
             <div
               className="card"
               key={index}
