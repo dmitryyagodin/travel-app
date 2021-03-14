@@ -15,6 +15,20 @@ export interface CountryItem {
   sights: Array<SightItem>
 }
 
+export interface CountryItemFirebase {
+  img_title: string,
+  name_ru: string,
+  name_en: string,
+  name_es: string,
+  info_ru: string,
+  info_en: string,
+  info_es: string,
+  capital_ru: string,
+  capital_en: string,
+  capital_es: string,
+  video: string
+}
+
 export interface Params {
   country: string;
 }
