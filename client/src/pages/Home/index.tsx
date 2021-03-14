@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import { Context } from '../../context/MainContext';
-import { HomeSlides } from '../HomeSlides';
 import './Home.scss';
 import { Countries } from '../../dummy-data/index';
 import { CountryItem } from '../../interfaces/interfaces';
+import { Widgets } from "../../components/Widgets";
 
 export const Home: React.FC = () => {
   const { user } = React.useContext(Context)
@@ -45,6 +45,7 @@ export const Home: React.FC = () => {
           );
         })}
       </div>
+      <Widgets city="Токио" lang="ru"/>
     </div>
   )
 }
