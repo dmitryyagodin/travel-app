@@ -30,7 +30,7 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
   useEffect(() => {
     const resultsAfterSwitch: CountryItem = Countries
       .find(item => item.id.toString() === id) || {} as CountryItem;
-    resultsAfterSwitch.translateTo.en.sights.forEach((el: any) => setSliderImges((prev: any) => [...prev, el.picture]));
+    resultsAfterSwitch.translateTo.en.sights.map((el: any) => setSliderImges((prev: any) => [...prev, el.picture]));
 
     switch (langItem) {
       case 'en':

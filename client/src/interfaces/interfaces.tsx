@@ -23,8 +23,8 @@ export interface CountryItem {
   picture: any;
   video: string;
   translateTo: Languages;
-  lat?: number;
-  long?: number;
+  lat: number;
+  long: number;
 }
 
 export interface ResultCountryItem {
