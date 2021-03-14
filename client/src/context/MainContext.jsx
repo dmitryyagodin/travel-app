@@ -33,13 +33,13 @@ export const MainContext = ({ children }) => {
     firestore.collection("countries")
       .get()
       .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => setCountries(prev => [...prev, doc.data().data]));
+        querySnapshot.forEach((doc) => setCountries(prev => [...prev, doc.data()]));
       })
       .catch((error) => {
         console.log("Error getting documents: ", error);
       });
   }, [])
-  
+
   console.log(countries);
 
   const homePage = {
@@ -48,7 +48,15 @@ export const MainContext = ({ children }) => {
   }
 
   return (
-    <Context.Provider value={{ homePage, user, firebase, auth, firestore, location }}>
+    <Context.Provider value={{
+      homePage,
+      user,
+      firebase,
+      auth,
+      firestore,
+      location,
+      countries
+    }}>
       {children}
     </Context.Provider>
   )
