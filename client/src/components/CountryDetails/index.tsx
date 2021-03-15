@@ -20,6 +20,7 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
   const [capitalValue, setCapitalValue] = useState('Capital');
   const langItem: string = props.langValue;
   const [sliderImages, setSliderImges] = useState([] as any)
+  const [video, setVideo] = useState('' as any)
   let { id } = useParams() as Params;
   id = id.replace(":", "");
 
@@ -31,6 +32,7 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
     const resultsAfterSwitch: CountryItem = Countries
       .find(item => item.id.toString() === id) || {} as CountryItem;
     resultsAfterSwitch.translateTo.en.sights.map((el: any) => setSliderImges((prev: any) => [...prev, el.picture]));
+    setVideo(resultsAfterSwitch.video)
 
     switch (langItem) {
       case 'en':
@@ -73,9 +75,10 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
   }, [id, langItem]);
 
   return (
-    <div>
+    <>
       <ScrollToTopOnMount />
       <Banner images={sliderImages} />
+      <iframe title="Video" width="560" height="315" src={video.replace(/watch\?v\=/, 'embed/')}></iframe>
       <button
         className="btn btn-primary"
         type="button"
@@ -88,6 +91,6 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
         <p className="card-text">{capitalValue}: {countryDetail.capitalName}</p>
       </div>
       <CountryMap countryId={id} language={langItem} />
-    </div>
+    </>
   )
 }
