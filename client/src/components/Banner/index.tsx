@@ -3,10 +3,10 @@ import './Banner.scss'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css';
 import Modal from '@material-ui/core/Modal';
-
-interface BannerProps {
-  images: Array<string>;
-}
+import {
+  BannerProps,
+  BannerPropsItem
+} from '../../interfaces/interfaces';
 
 const responsive = {
   superLargeDesktop: {
@@ -28,15 +28,17 @@ const responsive = {
   }
 };
 
-const Banner: React.FC<BannerProps> = ({ images }) => {
+// const Banner: React.FC<BannerProps> = ({ images }) => {
+const Banner: React.FC<BannerProps> = (props) => {
   const [modalPicture, setModalPicture] = React.useState('')
   const [open, setOpen] = React.useState(false)
 
   const imageClickHandler = (e: any) => {
-    const image: string = images[+e.target.id]
-    setModalPicture(image)
-    setOpen(true)
+    // const image: string = images[+e.target.id];
+    // setModalPicture(image);
+    // setOpen(true);
   }
+
   return (
     <div className="banner">
       <Carousel
@@ -46,9 +48,9 @@ const Banner: React.FC<BannerProps> = ({ images }) => {
         infinite
         dotListClass="dots"
       >
-        {images.map((el: string, index: number) => (
-          <div id={index.toString()} className="slide-item" style={{ backgroundImage: `url(${el})` }} key={index} onClick={imageClickHandler}>
-            {/* <img src={el} alt="" /> */}
+        {props.sliderdata.map((el: BannerPropsItem, index: number) => (
+          <div id={index.toString()} className="slide-item" style={{ backgroundImage: `url(${el.picture})` }} key={index} onClick={imageClickHandler}>
+            {}
           </div>
         ))}
       </Carousel>

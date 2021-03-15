@@ -98,3 +98,25 @@ export interface CountryMapItem {
   countryId: string;
   language: string;
 }
+
+export interface BannerPropsItem {
+  id: string;
+  picture: string;
+  sightName: {
+    'en': string;
+    'ru': string;
+    'es': string;
+  },
+  description: {
+    'en': string;
+    'ru': string;
+    'es': string;
+  }
+}
+
+export interface BannerProps {
+  // images: Array<string>;
+  // selectedLang: string;
+  // countryId: string;
+  sliderdata: Array<BannerPropsItem>
+}
