@@ -134,28 +134,35 @@ export const Admin: React.FC<AdminProps> = () => {
         sightEn.picture = e.target.value
         break;
       case 'sight_name_ru':
-        sightRu.sightName = e.target.name
+        sightRu.sightName = e.target.value
+        console.log(e.target.value);
         break;
       case 'sight_name_en':
-        sightEn.sightName = e.target.name
+        sightEn.sightName = e.target.value
+        console.log(e.target.value);
         break;
       case 'sight_name_es':
-        sightEs.sightName = e.target.name
+        sightEs.sightName = e.target.value
+        console.log(e.target.value);
         break;
       case 'sight_desc_ru':
-        sightEs.description = e.target.name
+        sightEs.description = e.target.value
+        console.log(e.target.value);
         break;
       case 'sight_desc_en':
-        sightEs.description = e.target.name
+        sightEs.description = e.target.value
+        console.log(e.target.value);
         break;
       case 'sight_desc_es':
-        sightEs.description = e.target.name
+        sightEs.description = e.target.value
         break;
       case 'lat':
-        setLat(e.target.name)
+        setLat(e.target.value)
+        console.log(e.target.value);
         break;
       case 'long':
-        setLong(e.target.name)
+        setLong(e.target.value)
+        console.log(e.target.value);
         break;
       default:
         break;
@@ -166,6 +173,7 @@ export const Admin: React.FC<AdminProps> = () => {
     setSightsEn([...sightsEn, sightEn])
     setSightsEs([...sightsEs, sightEs])
     setSightsRu([...sightsRu, sightRu])
+    console.log(data);
     
     Object.values(e.target.parentNode.children).forEach((el: any) => {
       el.value = ''
