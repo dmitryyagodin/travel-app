@@ -33,6 +33,11 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
       .find(item => item.id.toString() === id) || {} as CountryItem;
     resultsAfterSwitch.translateTo.en.sights.map((el: any) => setSliderImges((prev: any) => [...prev, el.picture]));
     setVideo(resultsAfterSwitch.video)
+  }, [id])
+
+  useEffect(() => {
+    const resultsAfterSwitch: CountryItem = Countries
+      .find(item => item.id.toString() === id) || {} as CountryItem;
 
     switch (langItem) {
       case 'en':
@@ -78,7 +83,7 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
     <>
       <ScrollToTopOnMount />
       <Banner images={sliderImages} />
-      <iframe title="Video" width="560" height="315" src={video.replace(/watch\?v\=/, 'embed/')}></iframe>
+      <iframe title="Video" width="560" height="315" src={video.replace(/watch\?v\=/, 'embed/')} allowFullScreen></iframe>
       <button
         className="btn btn-primary"
         type="button"
