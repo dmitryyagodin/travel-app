@@ -11,7 +11,6 @@ import {
   CountryItemFirebase
 } from '../../interfaces/interfaces';
 import { HomeData } from '../../assets/translations/home-data';
-import {Widgets} from "../../components/Widgets";
 
 export const Home: React.FC<HomeItem> = (props) => {
   const { user, countries } = React.useContext(Context)
@@ -80,7 +79,6 @@ export const Home: React.FC<HomeItem> = (props) => {
       <HomeSlides />
       <div className="container-xl">
         {user && <h1>Hello, {user.displayName}</h1>}
-        <Widgets city="Rim" lang={langItem}/>
         <div className='card-field'>
           {searchResults
             .map((element, index) => {

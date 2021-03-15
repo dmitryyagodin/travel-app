@@ -12,6 +12,7 @@ import { DetailsData } from '../../assets/translations/details-data';
 import { ScrollToTopOnMount } from '../ScrollToTopOnMount';
 import { CountryMap } from '../CountryMap/index';
 import Banner from "../Banner";
+import { Widgets } from "../Widgets";
 
 export const CountryDetails: React.FC<DetailsItem> = (props) => {
   const history = useHistory();
@@ -95,6 +96,7 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
         <h5 className="card-title">{countryDetail.countryName}</h5>
         <p className="card-text">{capitalValue}: {countryDetail.capitalName}</p>
       </div>
+      <Widgets city={countryDetail.capitalName} lang={langItem}/>
       <CountryMap countryId={id} language={langItem} />
     </>
   )
