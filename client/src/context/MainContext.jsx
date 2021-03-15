@@ -1,8 +1,9 @@
-import React from 'react'
-import firebase from 'firebase'
-import 'firebase/auth'
-import 'firebase/firestore'
-import { useAuthState } from 'react-firebase-hooks/auth'
+import React from 'react';
+import { useLocation } from "react-router-dom";
+import firebase from 'firebase';
+import 'firebase/auth';
+import 'firebase/firestore';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 var firebaseConfig = {
   apiKey: "AIzaSyA65k6MEJoBJlYG3MY7iosoGuHUb1gkimk",
@@ -16,18 +17,46 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 export const Context = React.createContext()
+export const fire = firebase
 
 const auth = firebase.auth()
 const firestore = firebase.firestore()
 
+
+
 export const MainContext = ({ children }) => {
-  const [user] = useAuthState(auth)
+  const [user] = useAuthState(auth);
+  const location = useLocation();
+  const [countries, setCountries] = React.useState([])
+
+  React.useEffect(() => {
+    firestore.collection("countries")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => setCountries(prev => [...prev, doc.data()]));
+      })
+      .catch((error) => {
+        console.log("Error getting documents: ", error);
+      });
+  }, [])
+
+  console.log(countries);
+
   const homePage = {
     title: 'Home Page',
     subtitle: 'Travel App',
   }
+
   return (
-    <Context.Provider value={{ homePage, user, firebase, auth, firestore }}>
+    <Context.Provider value={{
+      homePage,
+      user,
+      firebase,
+      auth,
+      firestore,
+      location,
+      countries
+    }}>
       {children}
     </Context.Provider>
   )

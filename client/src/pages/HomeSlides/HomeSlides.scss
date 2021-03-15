@@ -8,16 +8,51 @@
   to {opacity: 1}
 }
 
+@keyframes transformTextX {
+  0% { transform: translateX(-20%); }
+  12.5% { transform: translateX(0); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes transformTextY {
+  0% { transform: translateY(50%); }
+  12.5% { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
+
 .slides-container {
   width: 100%;
   padding: 0;
   margin: 0 auto;
   position: relative;
+  height: 700px;
 
   img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+  }
+
+  &__content {
+    position: absolute;
+    font-size: 32px;
+    top: 30%;
+    left: 10%;
+    color: #fff;
+    
+    h2 {
+      animation-name: transformTextX;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+
+    p {
+      animation-name: transformTextY;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
   }
 
   .slide-dots {

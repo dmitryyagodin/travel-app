@@ -6,6 +6,7 @@ export const Widgets = (props) => {
     const [weather, setWeather] = useState({})
     const [timezone, setTimezone] = useState(0)
     const [currentTime, setCurrentTime] = useState({})
+    const [intervalId, setIntervalId] = useState(NaN)
 
     const API_key = '22e1a28195a55f31b975106ea93e2482'
 
@@ -32,7 +33,6 @@ export const Widgets = (props) => {
                     return response.json()
                 })
                 .then((data) => {
-                    console.log(data)
                     const temp = Math.round(data.main.temp)
                     setWeather({
                         city: data.name,
@@ -41,10 +41,15 @@ export const Widgets = (props) => {
                         icon: `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
                     })
                     setTimezone(data.timezone)
-                    setInterval(() => {
+                    const intervalId = setInterval(() => {
                         getTime(data.timezone)
                     }, 5000)
+                    setIntervalId(intervalId)
                 })
+                .catch((error) => {
+                    console.log("Error getting weather data: ", error);
+                });
+            return clearInterval(intervalId)
         }
         getWeather().then()
     }, [city, lang])

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "bootswatch/dist/solar/bootstrap.min.css";
+import "bootswatch/dist/yeti/bootstrap.min.css";
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
