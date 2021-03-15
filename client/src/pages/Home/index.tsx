@@ -82,26 +82,6 @@ export const Home: React.FC<HomeItem> = (props) => {
         {user && <h1>Hello, {user.displayName}</h1>}
         <Widgets city="Rim" lang={langItem}/>
         <div className='card-field'>
-          {countries.map((el: CountryItemFirebase, index: any) => (
-            <div
-              className="card"
-              key={index}
-            >
-              <img src={el.img_title} alt="" />
-              <div className="card-body">
-                <h5 className="card-title">{el.name_ru}</h5>
-                <p className="card-text">Capital: {el.capital_ru}</p>
-                <Link
-                  to={{
-                    pathname: `/allcountries/:${el.name_en}`,
-                  }}
-                  className="header-link"
-                >
-                  See details
-                    </Link>
-              </div>
-            </div>
-          ))}
           {searchResults
             .map((element, index) => {
               return (
