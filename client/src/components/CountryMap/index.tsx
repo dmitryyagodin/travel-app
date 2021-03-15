@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import mapboxgl from "mapbox-gl";
-import env from "react-dotenv";
+// import env from "react-dotenv";
 import 'mapbox-gl/dist/mapbox-gl.css';
 import "./CountryMap.scss";
 import { CountryMapItem, CountryItem } from '../../interfaces/interfaces';
 import { Countries } from '../../assets/index';
 import getCountryCode from '../../helpers/index';
 
-mapboxgl.accessToken = env.REACT_APP_MAPBOX_ACCESS_TOKEN;
+mapboxgl.accessToken = 'pk.eyJ1IjoidmVyb25pa2F2IiwiYSI6ImNrbTkyc3h4ZTBqcmcycHBodjVnc2czaHAifQ.Ihormn1fNlJh9bdYxMUvlw';
 
 
 export const CountryMap: React.FC<CountryMapItem> = (props) => {
