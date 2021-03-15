@@ -29,7 +29,6 @@ const responsive = {
   }
 };
 
-// const Banner: React.FC<BannerProps> = ({ images }) => {
 const Banner: React.FC<BannerProps> = (props) => {
   const [modalPicture, setModalPicture] = React.useState('')
   const [open, setOpen] = React.useState(false);
