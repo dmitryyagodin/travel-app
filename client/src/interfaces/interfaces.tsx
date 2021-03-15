@@ -102,21 +102,13 @@ export interface CountryMapItem {
 export interface BannerPropsItem {
   id: string;
   picture: string;
-  sightName: {
-    'en': string;
-    'ru': string;
-    'es': string;
-  },
-  description: {
-    'en': string;
-    'ru': string;
-    'es': string;
-  }
+  sightName: Languages;
+  description: Languages;
 }
 
 export interface BannerProps {
-  // images: Array<string>;
-  // selectedLang: string;
-  // countryId: string;
-  sliderdata: Array<BannerPropsItem>
+  sliderdata: Array<BannerPropsItem>;
+  selectedLang: string;
 }
+
+export type SelectedLang = 'en' | 'ru' | 'es';

@@ -20,7 +20,6 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
   const [btnValue, setBtnValue] = useState('Back to main page');
   const [capitalValue, setCapitalValue] = useState('Capital');
   const langItem: string = props.langValue;
-  // const [sliderImages, setSliderImages] = useState([] as any);
   const [sliderDataItem, setSliderData] = useState([] as any);
   const [video, setVideo] = useState('' as any)
   let { id } = useParams() as Params;
@@ -42,19 +41,18 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
         id: el.id,
         picture: el.picture,
         sightName: {
-          'en': el.sightName,
-          'ru': ruData[0]?.sightName,
-          'es': esData[0]?.sightName
+          en: el.sightName,
+          ru: ruData[0]?.sightName,
+          es: esData[0]?.sightName
         },
         description: {
-          'en': el.description,
-          'ru': ruData[0]?.description,
-          'es': esData[0]?.description,
+          en: el.description,
+          ru: ruData[0]?.description,
+          es: esData[0]?.description
         }
       }
     });
     setSliderData(sliderData);
-    // resultsAfterSwitch.translateTo.en.sights.map((el: any) => setSliderImages((prev: any) => [...prev, el.picture]));
     setVideo(resultsAfterSwitch.video);
   }, [id])
 
@@ -105,21 +103,22 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
   return (
     <>
       <ScrollToTopOnMount />
-      <button
-        className="btn btn-primary"
-        type="button"
-        onClick={handleBackClick}
-      >
-        {btnValue}
-      </button>
-      <div className="card-body">
-        <h5 className="card-title">{countryDetail.countryName}</h5>
-        <p className="card-text">{capitalValue}: {countryDetail.capitalName}</p>
+      <div className="container country-details">
+        <button
+          className="btn btn-primary"
+          type="button"
+          onClick={handleBackClick}
+        >
+          {btnValue}
+        </button>
+        <div className="card-body">
+          <h5 className="card-title">{countryDetail.countryName}</h5>
+          <p className="card-text">{capitalValue}: {countryDetail.capitalName}</p>
+        </div>
+        <iframe title="Video" width="560" height="315" src={video.replace(/watch\?v\=/, 'embed/')} allowFullScreen></iframe>
+        <Widgets city={countryDetail.capitalName} lang={langItem}/>
       </div>
-      {/* <Banner images={sliderImages} /> */}
-      <Banner sliderdata={sliderDataItem} />
-      <iframe title="Video" width="560" height="315" src={video.replace(/watch\?v\=/, 'embed/')} allowFullScreen></iframe>
-      <Widgets city={countryDetail.capitalName} lang={langItem}/>
+      <Banner sliderdata={sliderDataItem} selectedLang={langItem} />
       <CountryMap countryId={id} language={langItem} />
     </>
   )

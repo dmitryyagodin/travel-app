@@ -5,7 +5,8 @@ import 'react-multi-carousel/lib/styles.css';
 import Modal from '@material-ui/core/Modal';
 import {
   BannerProps,
-  BannerPropsItem
+  BannerPropsItem,
+  SelectedLang
 } from '../../interfaces/interfaces';
 
 const responsive = {
@@ -31,12 +32,13 @@ const responsive = {
 // const Banner: React.FC<BannerProps> = ({ images }) => {
 const Banner: React.FC<BannerProps> = (props) => {
   const [modalPicture, setModalPicture] = React.useState('')
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
+  const selectedLang: SelectedLang = props.selectedLang as SelectedLang;
 
   const imageClickHandler = (e: any) => {
-    // const image: string = images[+e.target.id];
-    // setModalPicture(image);
-    // setOpen(true);
+    const image: string = props.sliderdata[+e.target.id].picture;
+    setModalPicture(image);
+    setOpen(true);
   }
 
   return (
@@ -49,8 +51,17 @@ const Banner: React.FC<BannerProps> = (props) => {
         dotListClass="dots"
       >
         {props.sliderdata.map((el: BannerPropsItem, index: number) => (
-          <div id={index.toString()} className="slide-item" style={{ backgroundImage: `url(${el.picture})` }} key={index} onClick={imageClickHandler}>
-            {}
+          <div
+            id={index.toString()}
+            className="slide-item"
+            style={{ backgroundImage: `url(${el.picture})` }}
+            key={index}
+            onClick={imageClickHandler}
+          >
+            <div className="slide-item-description">
+              <h3>{el.sightName[selectedLang]}</h3>
+              <p>{el.description[selectedLang]}</p>
+            </div>
           </div>
         ))}
       </Carousel>
