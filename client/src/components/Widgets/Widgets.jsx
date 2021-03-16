@@ -52,7 +52,7 @@ export const Widgets = (props) => {
             return clearInterval(intervalId)
         }
         getWeather().then()
-    }, [city, lang])
+    }, [city, intervalId, lang])
 
     useEffect(() => {
         getTime(timezone)
@@ -60,7 +60,7 @@ export const Widgets = (props) => {
 
     return (
         <>
-            <div className="widget-container">
+            <div className="widget-container weather">
                 <span className="weather-city">{weather.city}</span>
                 <div className="temperature">
                     <span>{weather.temp}</span>

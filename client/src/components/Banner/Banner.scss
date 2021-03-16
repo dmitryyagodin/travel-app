@@ -9,15 +9,21 @@
           width: 100%;
           height: 600px;
 
+          .slide-item-rating {
+            position: absolute;
+            bottom: 20px;
+            right: 10%;
+            width: 10%;
+          }
+
           .slide-item-description {
-            width: 60%;
-            margin: 0 auto;
+            width: 50%;
             color: #000;
             background-color: #fff;
             padding: 10px;
             position: absolute;
             bottom: 20px;
-            left: 20%;
+            left: 25%;
             opacity: 0.8;
           }
         }

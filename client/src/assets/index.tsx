@@ -61,8 +61,8 @@ export const Countries: Array<CountryItem> = [
     id: 1,
     picture: Cuba,
     video: 'https://www.youtube.com/watch?v=exfjK7rvLUY',
-    lat: 23.1165,
-    long: -82.3882,
+    lat: '23.1165',
+    long: '-82.3882',
     translateTo: {
       en: {
         countryName: 'The Republic of Cuba',
@@ -202,8 +202,8 @@ export const Countries: Array<CountryItem> = [
     id: 2,
     picture: Albania,
     video: 'https://www.youtube.com/watch?v=TcggfMkWgpg',
-    lat: 41.33,
-    long: 19.82,
+    lat: '41.33',
+    long: '19.82',
     translateTo: {
       en: {
         countryName: 'The Republic of Albania',
@@ -343,8 +343,8 @@ export const Countries: Array<CountryItem> = [
     id: 3,
     picture: Peru,
     video: 'https://www.youtube.com/watch?v=wvdc8S1WoE8',
-    lat: -12.0453,
-    long: -77.0311,
+    lat: '-12.0453',
+    long: '-77.0311',
     translateTo: {
       en:{
         countryName: 'The Republic of Peru',
@@ -484,8 +484,8 @@ export const Countries: Array<CountryItem> = [
     id: 4,
     picture: Canada,
     video: 'https://www.youtube.com/watch?v=FqrcRmGPWQc',
-    lat: 45.4208,
-    long: -75.69,
+    lat: '45.4208',
+    long: '-75.69',
     translateTo: {
       en: {
         countryName: 'Canada',
@@ -625,8 +625,8 @@ export const Countries: Array<CountryItem> = [
     id: 5,
     picture: Iceland,
     video: 'https://www.youtube.com/watch?v=wwVoA_s60JQ',
-    lat: 64.1353,
-    long: -21.8952,
+    lat: '64.1353',
+    long: '-21.8952',
     translateTo: {
       en: {
         countryName: 'Iceland',
@@ -766,8 +766,8 @@ export const Countries: Array<CountryItem> = [
     id: 6,
     picture: Portugal,
     video: 'https://www.youtube.com/watch?v=KCgtPL1D6vM',
-    lat: 38.7927,
-    long: -9.18272,
+    lat: '38.7927',
+    long: '-9.18272',
     translateTo: {
       en: {
         countryName: 'The Portuguese Republic',
@@ -907,8 +907,8 @@ export const Countries: Array<CountryItem> = [
     id: 7,
     picture: Jordan,
     video: 'https://www.youtube.com/watch?v=npjIIfN1f-M',
-    lat: 31.954,
-    long: 35.9354,
+    lat: '31.954',
+    long: '35.9354',
     translateTo: {
       en: {
         countryName: 'The Hashemite Kingdom of Jordan',
@@ -1048,8 +1048,8 @@ export const Countries: Array<CountryItem> = [
     id: 8,
     picture: CostaRica,
     video: 'https://www.youtube.com/watch?v=Ci--UvWrsbk',
-    lat: 9.9333,
-    long: -84.0833,
+    lat: '9.9333',
+    long: '-84.0833',
     translateTo: {
       en: {
         countryName: 'The Republic of Costa Rica',

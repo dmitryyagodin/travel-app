@@ -26,7 +26,7 @@ export const CountryMap: React.FC<CountryMapItem> = (props) => {
     const map = new mapboxgl.Map({
       container: "mapContainer",
       style: "mapbox://styles/mapbox/streets-v11",
-      center: [long, lat],
+      center: [+long, +lat],
       zoom: 3,
     });
 
@@ -72,7 +72,7 @@ export const CountryMap: React.FC<CountryMapItem> = (props) => {
 
     // add marker to the capital
     new mapboxgl.Marker()
-      .setLngLat([long, lat])
+      .setLngLat([+long, +lat])
       .addTo(map);
 
     // clean up on unmount
