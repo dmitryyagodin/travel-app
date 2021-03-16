@@ -20,7 +20,7 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
   const [btnValue, setBtnValue] = useState('Back to main page');
   const [capitalValue, setCapitalValue] = useState('Capital');
   const langItem: string = props.langValue;
-  const [sliderImages, setSliderImges] = useState([] as any)
+  const [sliderDataItem, setSliderData] = useState([] as any);
   const [video, setVideo] = useState('' as any)
   let { id } = useParams() as Params;
   id = id.replace(":", "");
@@ -32,8 +32,28 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
   useEffect(() => {
     const resultsAfterSwitch: CountryItem = Countries
       .find(item => item.id.toString() === id) || {} as CountryItem;
-    resultsAfterSwitch.translateTo.en.sights.map((el: any) => setSliderImges((prev: any) => [...prev, el.picture]));
-    setVideo(resultsAfterSwitch.video)
+    const sliderData = resultsAfterSwitch.translateTo.en.sights.map((el, index) => {
+      const ruData = resultsAfterSwitch.translateTo.ru.sights
+        .filter(el => el.id.toString() === (index+1).toString());
+      const esData = resultsAfterSwitch.translateTo.es.sights
+        .filter(el => el.id.toString() === (index+1).toString());
+      return {
+        id: el.id,
+        picture: el.picture,
+        sightName: {
+          en: el.sightName,
+          ru: ruData[0]?.sightName,
+          es: esData[0]?.sightName
+        },
+        description: {
+          en: el.description,
+          ru: ruData[0]?.description,
+          es: esData[0]?.description
+        }
+      }
+    });
+    setSliderData(sliderData);
+    setVideo(resultsAfterSwitch.video);
   }, [id])
 
   useEffect(() => {
@@ -83,20 +103,22 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
   return (
     <>
       <ScrollToTopOnMount />
-      <Banner images={sliderImages} />
-      <iframe title="Video" width="560" height="315" src={video.replace(/watch\?v\=/, 'embed/')} allowFullScreen></iframe>
-      <button
-        className="btn btn-primary"
-        type="button"
-        onClick={handleBackClick}
-      >
-        {btnValue}
-      </button>
-      <div className="card-body">
-        <h5 className="card-title">{countryDetail.countryName}</h5>
-        <p className="card-text">{capitalValue}: {countryDetail.capitalName}</p>
+      <div className="container country-details">
+        <button
+          className="btn btn-primary"
+          type="button"
+          onClick={handleBackClick}
+        >
+          {btnValue}
+        </button>
+        <div className="card-body">
+          <h5 className="card-title">{countryDetail.countryName}</h5>
+          <p className="card-text">{capitalValue}: {countryDetail.capitalName}</p>
+        </div>
+        <iframe title="Video" width="560" height="315" src={video.replace(/watch\?v\=/, 'embed/')} allowFullScreen></iframe>
+        <Widgets city={countryDetail.capitalName} lang={langItem}/>
       </div>
-      <Widgets city={countryDetail.capitalName} lang={langItem}/>
+      <Banner sliderdata={sliderDataItem} selectedLang={langItem} />
       <CountryMap countryId={id} language={langItem} />
     </>
   )

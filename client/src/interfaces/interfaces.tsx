@@ -98,3 +98,17 @@ export interface CountryMapItem {
   countryId: string;
   language: string;
 }
+
+export interface BannerPropsItem {
+  id: string;
+  picture: string;
+  sightName: Languages;
+  description: Languages;
+}
+
+export interface BannerProps {
+  sliderdata: Array<BannerPropsItem>;
+  selectedLang: string;
+}
+
+export type SelectedLang = 'en' | 'ru' | 'es';
