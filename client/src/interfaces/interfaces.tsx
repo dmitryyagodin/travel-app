@@ -76,6 +76,7 @@ export interface ResultCountryDetailItem {
   countryName: string,
   capitalName: string,
   picture: string;
+  description: string;
 }
 
 export interface SelectLangDataItem {

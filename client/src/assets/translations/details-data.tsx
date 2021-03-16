@@ -8,5 +8,10 @@ export const DetailsData = {
     en: 'Capital',
     ru: 'Столица',
     es: 'Capital'
+  },
+  descrValue: {
+    en: 'Description',
+    ru: 'Описание',
+    es: 'Descripción'
   }
 }
