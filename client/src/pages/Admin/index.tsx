@@ -22,8 +22,8 @@ interface AdminProps {
 
 export const Admin: React.FC<AdminProps> = () => {
   const [photoCount, setPhotoCount] = React.useState(0)
-  const [lat, setLat] = React.useState(0)
-  const [long, setLong] = React.useState(0)
+  const [lat, setLat] = React.useState('0')
+  const [long, setLong] = React.useState('0')
   const [nameRu, setNameRu] = React.useState('')
   const [nameEn, setNameEn] = React.useState('')
   const [nameEs, setNameEs] = React.useState('')
@@ -35,31 +35,31 @@ export const Admin: React.FC<AdminProps> = () => {
   const [infoEs, setInfoEs] = React.useState('')
   const [video, setVideo] = React.useState('')
   const [titlePhoto, setTitlePhoto] = React.useState('')
-  const [images, setImages] = React.useState(new Array())
-  let sightRu:SightItem = 
+  const [images, setImages] = React.useState([]) as any;
+  let sightRu: SightItem =
   {
     id: Date.now(),
     picture: '',
     sightName: '',
     description: ''
   }
-  let sightEs:SightItem = 
+  let sightEs: SightItem =
   {
     id: Date.now(),
     picture: '',
     sightName: '',
     description: ''
   }
-  let sightEn:SightItem = 
+  let sightEn: SightItem =
   {
     id: Date.now(),
     picture: '',
     sightName: '',
     description: ''
   }
-  const [sightsRu, setSightsRu] = React.useState(new Array())
-  const [sightsEn, setSightsEn] = React.useState(new Array())
-  const [sightsEs, setSightsEs] = React.useState(new Array())
+  const [sightsRu, setSightsRu] = React.useState([]) as any;
+  const [sightsEn, setSightsEn] = React.useState([]) as any;
+  const [sightsEs, setSightsEs] = React.useState([]) as any;
 
   const firestore = fire.firestore()
 
@@ -177,7 +177,7 @@ export const Admin: React.FC<AdminProps> = () => {
     setSightsEs([...sightsEs, sightEs])
     setSightsRu([...sightsRu, sightRu])
     console.log(data);
-    
+
     Object.values(e.target.parentNode.children).forEach((el: any) => {
       el.value = ''
     })

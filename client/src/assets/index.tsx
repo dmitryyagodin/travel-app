@@ -61,8 +61,8 @@ export const Countries: Array<CountryItem> = [
     id: 1,
     picture: Cuba,
     video: 'https://www.youtube.com/watch?v=exfjK7rvLUY',
-    lat: 23.1165,
-    long: -82.3882,
+    lat: '23.1165',
+    long: '-82.3882',
     translateTo: {
       en: {
         countryName: 'The Republic of Cuba',
@@ -202,15 +202,14 @@ export const Countries: Array<CountryItem> = [
     id: 2,
     picture: Albania,
     video: 'https://www.youtube.com/watch?v=TcggfMkWgpg',
-    lat: 41.33,
-    long: 19.82,
+    lat: '41.33',
+    long: '19.82',
     translateTo: {
       en: {
         countryName: 'The Republic of Albania',
         capitalName: 'Tirana',
         lang: 'Albanian',
         description: 'is a country in Southeastern Europe. It is located on the Adriatic and Ionian Sea within the Mediterranean Sea, and shares land borders with Montenegro to the northwest, Kosovo[c] to the northeast, North Macedonia to the east, Greece to the south; and maritime borders with Greece, Montenegro and Italy to the west. Tirana is its capital and largest city, followed by Durrës, Vlorë and Shkodër.',
-
         sights: [
           {
             id: 1,
@@ -255,7 +254,6 @@ export const Countries: Array<CountryItem> = [
         capitalName: 'Тирана',
         lang: 'Албанский',
         description: 'Страна в Юго-Восточной Европе. Он расположен на берегу Адриатического и Ионического морей в Средиземном море и имеет сухопутные границы с Черногорией на северо-западе, Косово [c] на северо-востоке, Северной Македонией на востоке, Грецией на юге; и морские границы с Грецией, Черногорией и Италией на западе. Тирана - ее столица и крупнейший город, за ней следуют Дуррес, Влёра и Шкодер.',
-
         sights: [
           {
             id: 1,
@@ -300,7 +298,6 @@ export const Countries: Array<CountryItem> = [
         capitalName: 'Tirana',
         lang: 'Albanian',
         description: 'es un país del sureste de Europa. Se encuentra en el Mar Adriático y Jónico dentro del Mar Mediterráneo, y comparte fronteras terrestres con Montenegro al noroeste, Kosovo [c] al noreste, Macedonia del Norte al este, Grecia al sur; y fronteras marítimas con Grecia, Montenegro e Italia al oeste. Tirana es su capital y ciudad más grande, seguida de Durrës, Vlorë y Shkodër.',
-
         sights: [
           {
             id: 1,
@@ -341,14 +338,13 @@ export const Countries: Array<CountryItem> = [
         ]
       },
     }
-
   },
   {
     id: 3,
     picture: Peru,
     video: 'https://www.youtube.com/watch?v=wvdc8S1WoE8',
-    lat: -12.0453,
-    long: -77.0311,
+    lat: '-12.0453',
+    long: '-77.0311',
     translateTo: {
       en:{
         countryName: 'The Republic of Peru',
@@ -488,15 +484,14 @@ export const Countries: Array<CountryItem> = [
     id: 4,
     picture: Canada,
     video: 'https://www.youtube.com/watch?v=FqrcRmGPWQc',
-    lat: 45.4208,
-    long: -75.69,
+    lat: '45.4208',
+    long: '-75.69',
     translateTo: {
       en: {
         countryName: 'Canada',
         capitalName: 'Ottawa',
         lang: 'English, French',
         description: 'This is a country in the northern part of North America. Its ten provinces and three territories extend from the Atlantic to the Pacific and northward into the Arctic Ocean, covering 9.98 million square kilometres (3.85 million square miles), making it the worlds second-largest country by total area. Its southern and western border with the United States, stretching 8,891 kilometres (5,525 mi), is the worlds longest bi-national land border. Canadas capital is Ottawa, and its three largest metropolitan areas are Toronto, Montreal, and Vancouver.',
-
         sights: [
           {
             id: 1,
@@ -630,8 +625,8 @@ export const Countries: Array<CountryItem> = [
     id: 5,
     picture: Iceland,
     video: 'https://www.youtube.com/watch?v=wwVoA_s60JQ',
-    lat: 64.1353,
-    long: -21.8952,
+    lat: '64.1353',
+    long: '-21.8952',
     translateTo: {
       en: {
         countryName: 'Iceland',
@@ -771,8 +766,8 @@ export const Countries: Array<CountryItem> = [
     id: 6,
     picture: Portugal,
     video: 'https://www.youtube.com/watch?v=KCgtPL1D6vM',
-    lat: 38.7927,
-    long: -9.18272,
+    lat: '38.7927',
+    long: '-9.18272',
     translateTo: {
       en: {
         countryName: 'The Portuguese Republic',
@@ -912,8 +907,8 @@ export const Countries: Array<CountryItem> = [
     id: 7,
     picture: Jordan,
     video: 'https://www.youtube.com/watch?v=npjIIfN1f-M',
-    lat: 31.954,
-    long: 35.9354,
+    lat: '31.954',
+    long: '35.9354',
     translateTo: {
       en: {
         countryName: 'The Hashemite Kingdom of Jordan',
@@ -1053,8 +1048,8 @@ export const Countries: Array<CountryItem> = [
     id: 8,
     picture: CostaRica,
     video: 'https://www.youtube.com/watch?v=Ci--UvWrsbk',
-    lat: 9.9333,
-    long: -84.0833,
+    lat: '9.9333',
+    long: '-84.0833',
     translateTo: {
       en: {
         countryName: 'The Republic of Costa Rica',

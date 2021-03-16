@@ -8,5 +8,10 @@ export const HomeData = {
     en: 'Capital',
     ru: 'Столица',
     es: 'Capital'
+  },
+  greetingValue: {
+    en: 'Hello',
+    ru: 'Привет',
+    es: 'Hola'
   }
 }

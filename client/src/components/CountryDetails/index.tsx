@@ -13,25 +13,13 @@ import { ScrollToTopOnMount } from '../ScrollToTopOnMount';
 import { CountryMap } from '../CountryMap/index';
 import Banner from "../Banner";
 import { Widgets } from "../Widgets";
-import { makeStyles } from "@material-ui/core";
-import { CountryRating } from "../CountryRating";
-import { Context } from "../../context/MainContext";
-
-const useStyles = makeStyles({
-  root: {
-    width: 200,
-    display: 'flex',
-    alignItems: 'center',
-  },
-})
 
 export const CountryDetails: React.FC<DetailsItem> = (props) => {
-  const { userMark, setUserMark } = React.useContext(Context)
-  const classes = useStyles()
   const history = useHistory();
   const [countryDetail, setCountryDetail] = useState({} as ResultCountryDetailItem);
   const [btnValue, setBtnValue] = useState('Back to main page');
   const [capitalValue, setCapitalValue] = useState('Capital');
+  const [descrValue, setDescrValue] = useState('Description');
   const langItem: string = props.langValue;
   const [sliderDataItem, setSliderData] = useState([] as any);
   const [video, setVideo] = useState('' as any)
@@ -78,60 +66,82 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
         setCountryDetail({
           picture: resultsAfterSwitch.picture,
           countryName: resultsAfterSwitch.translateTo.en.countryName,
-          capitalName: resultsAfterSwitch.translateTo.en.capitalName
+          capitalName: resultsAfterSwitch.translateTo.en.capitalName,
+          description: resultsAfterSwitch.translateTo.en.description
         });
         setBtnValue(DetailsData.backButton.en);
         setCapitalValue(DetailsData.capitalVal.en);
+        setDescrValue(DetailsData.descrValue.en);
         break;
       case 'ru':
         setCountryDetail({
           picture: resultsAfterSwitch.picture,
           countryName: resultsAfterSwitch.translateTo.ru.countryName,
-          capitalName: resultsAfterSwitch.translateTo.ru.capitalName
+          capitalName: resultsAfterSwitch.translateTo.ru.capitalName,
+          description: resultsAfterSwitch.translateTo.ru.description
         });
         setBtnValue(DetailsData.backButton.ru);
         setCapitalValue(DetailsData.capitalVal.ru);
+        setDescrValue(DetailsData.descrValue.ru);
         break;
       case 'es':
         setCountryDetail({
           picture: resultsAfterSwitch.picture,
           countryName: resultsAfterSwitch.translateTo.es.countryName,
-          capitalName: resultsAfterSwitch.translateTo.es.capitalName
+          capitalName: resultsAfterSwitch.translateTo.es.capitalName,
+          description: resultsAfterSwitch.translateTo.es.description
         });
         setBtnValue(DetailsData.backButton.es);
         setCapitalValue(DetailsData.capitalVal.es);
+        setDescrValue(DetailsData.descrValue.es);
         break;
       default:
         setCountryDetail({
           picture: resultsAfterSwitch.picture,
           countryName: resultsAfterSwitch.translateTo.en.countryName,
-          capitalName: resultsAfterSwitch.translateTo.en.capitalName
+          capitalName: resultsAfterSwitch.translateTo.en.capitalName,
+          description: resultsAfterSwitch.translateTo.en.description
         });
         setBtnValue(DetailsData.backButton.en);
         setCapitalValue(DetailsData.capitalVal.en);
+        setDescrValue(DetailsData.descrValue.en);
     }
 
   }, [id, langItem]);
-
-  console.log(countryDetail);
 
   return (
     <>
       <ScrollToTopOnMount />
       <div className="container country-details">
-        <button
-          className="btn btn-primary"
-          type="button"
-          onClick={handleBackClick}
-        >
-          {btnValue}
-        </button>
-        <div className="card-body">
-          <h5 className="card-title">{countryDetail.countryName}</h5>
-          <p className="card-text">{capitalValue}: {countryDetail.capitalName}</p>
+        <div className="row back-btn">
+          <div className="col-sm">
+            <button
+              className="btn btn-primary"
+              type="button"
+              onClick={handleBackClick}
+            >
+              {btnValue}
+            </button>
+          </div>
         </div>
-        <iframe title="Video" width="560" height="315" src={video.replace(/watch\?v\=/, 'embed/')} allowFullScreen></iframe>
-        <Widgets city={countryDetail.capitalName} lang={langItem}/>
+        <div className="row">
+          <div className="col-sm-2">
+            <Widgets city={countryDetail.capitalName} lang={langItem}/>
+          </div>
+          <div className="col-sm-5">
+            <div className="card">
+              <img src={countryDetail.picture} className="card-img-top" alt={countryDetail.countryName} />
+              <div className="card-body">
+                <h5 className="card-title">{countryDetail.countryName}</h5>
+                <p className="card-text">{capitalValue}: {countryDetail.capitalName}</p>
+                <p className="card-text"><small className="text-muted">{descrValue}: {countryDetail.description}</small></p>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-5">
+            <iframe title="Video" width="560" height="350" src={video.replace(/watch\?v\=/, 'embed/')} allowFullScreen></iframe>
+          </div>
+        </div>
       </div>
       <Banner sliderdata={sliderDataItem} selectedLang={langItem} />
       <CountryMap countryId={id} language={langItem} />
