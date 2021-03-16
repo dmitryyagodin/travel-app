@@ -35,31 +35,31 @@ export const Admin: React.FC<AdminProps> = () => {
   const [infoEs, setInfoEs] = React.useState('')
   const [video, setVideo] = React.useState('')
   const [titlePhoto, setTitlePhoto] = React.useState('')
-  const [images, setImages] = React.useState([])
-  let sightRu:SightItem =
+  const [images, setImages] = React.useState([]) as any;
+  let sightRu: SightItem =
   {
     id: Date.now(),
     picture: '',
     sightName: '',
     description: ''
   }
-  let sightEs:SightItem =
+  let sightEs: SightItem =
   {
     id: Date.now(),
     picture: '',
     sightName: '',
     description: ''
   }
-  let sightEn:SightItem =
+  let sightEn: SightItem =
   {
     id: Date.now(),
     picture: '',
     sightName: '',
     description: ''
   }
-  const [sightsRu, setSightsRu] = React.useState([])
-  const [sightsEn, setSightsEn] = React.useState([])
-  const [sightsEs, setSightsEs] = React.useState([])
+  const [sightsRu, setSightsRu] = React.useState([]) as any;
+  const [sightsEn, setSightsEn] = React.useState([]) as any;
+  const [sightsEs, setSightsEs] = React.useState([]) as any;
 
   const firestore = fire.firestore()
 
