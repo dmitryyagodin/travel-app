@@ -36,24 +36,27 @@ export const Admin: React.FC<AdminProps> = () => {
   const [video, setVideo] = React.useState('')
   const [titlePhoto, setTitlePhoto] = React.useState('')
   const [images, setImages] = React.useState(new Array())
-  const [sightRu, setSightRu] = React.useState<SightItem>({
+  let sightRu:SightItem = 
+  {
     id: Date.now(),
     picture: '',
     sightName: '',
     description: ''
-  })
-  const [sightEs, setSightEs] = React.useState<SightItem>({
+  }
+  let sightEs:SightItem = 
+  {
     id: Date.now(),
     picture: '',
     sightName: '',
     description: ''
-  })
-  const [sightEn, setSightEn] = React.useState<SightItem>({
+  }
+  let sightEn:SightItem = 
+  {
     id: Date.now(),
     picture: '',
     sightName: '',
     description: ''
-  })
+  }
   const [sightsRu, setSightsRu] = React.useState(new Array())
   const [sightsEn, setSightsEn] = React.useState(new Array())
   const [sightsEs, setSightsEs] = React.useState(new Array())
@@ -130,12 +133,12 @@ export const Admin: React.FC<AdminProps> = () => {
         break;
       case 'sight_photo':
         sightEn.picture = e.target.value
-        sightEn.picture = e.target.value
-        sightEn.picture = e.target.value
+        sightEs.picture = e.target.value
+        sightRu.picture = e.target.value
         break;
       case 'sight_name_ru':
         sightRu.sightName = e.target.value
-        console.log(e.target.value);
+        console.log(sightRu.sightName);
         break;
       case 'sight_name_en':
         sightEn.sightName = e.target.value
@@ -146,11 +149,11 @@ export const Admin: React.FC<AdminProps> = () => {
         console.log(e.target.value);
         break;
       case 'sight_desc_ru':
-        sightEs.description = e.target.value
+        sightRu.description = e.target.value
         console.log(e.target.value);
         break;
       case 'sight_desc_en':
-        sightEs.description = e.target.value
+        sightEn.description = e.target.value
         console.log(e.target.value);
         break;
       case 'sight_desc_es':
@@ -220,10 +223,10 @@ export const Admin: React.FC<AdminProps> = () => {
         <label htmlFor="capital_ru">Столица на русском</label>
         <input type="text" id="capital_ru" placeholder="Столица RU" />
 
-        <label htmlFor="capital_ru">Столица на русском</label>
+        <label htmlFor="capital_ru">Столица на английском</label>
         <input type="text" id="capital_en" placeholder="Столица EN" />
 
-        <label htmlFor="capital_es">Столица на русском</label>
+        <label htmlFor="capital_es">Столица на испанском</label>
         <input type="text" id="capital_es" placeholder="Столица ES" />
 
         <label htmlFor="info_ru">Информация о стране на русском</label>
@@ -241,10 +244,10 @@ export const Admin: React.FC<AdminProps> = () => {
         <label htmlFor="video">Титульное видео</label>
         <input type="text" id="video" placeholder="Видео" />
 
-        <label htmlFor="lat">Титульное видео</label>
+        <label htmlFor="lat">Широта</label>
         <input type="text" id="lat" placeholder="Широта" />
 
-        <label htmlFor="long">Титульное видео</label>
+        <label htmlFor="long">Долгота</label>
         <input type="text" id="long" placeholder="Долгота" />
 
         <form style={{ display: 'flex' }}>
@@ -268,7 +271,7 @@ export const Admin: React.FC<AdminProps> = () => {
         <input type="text" id="sight_desc_ru" placeholder="Описание достопримечательности на русском" />
 
         <label htmlFor="sight_name_en">Название достопримечательности на английском</label>
-        <input type="text" id="sight_name_ru" placeholder="Название достопримечательности на английском" />
+        <input type="text" id="sight_name_en" placeholder="Название достопримечательности на английском" />
 
         <label htmlFor="sight_desc_en">Описание достопримечательности на английском</label>
         <input type="text" id="sight_desc_en" placeholder="Описание достопримечательности на английском" />

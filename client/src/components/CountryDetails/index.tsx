@@ -13,8 +13,21 @@ import { ScrollToTopOnMount } from '../ScrollToTopOnMount';
 import { CountryMap } from '../CountryMap/index';
 import Banner from "../Banner";
 import { Widgets } from "../Widgets";
+import { makeStyles } from "@material-ui/core";
+import { CountryRating } from "../CountryRating";
+import { Context } from "../../context/MainContext";
+
+const useStyles = makeStyles({
+  root: {
+    width: 200,
+    display: 'flex',
+    alignItems: 'center',
+  },
+})
 
 export const CountryDetails: React.FC<DetailsItem> = (props) => {
+  const { userMark, setUserMark } = React.useContext(Context)
+  const classes = useStyles()
   const history = useHistory();
   const [countryDetail, setCountryDetail] = useState({} as ResultCountryDetailItem);
   const [btnValue, setBtnValue] = useState('Back to main page');
@@ -108,6 +121,8 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
     }
 
   }, [id, langItem]);
+
+  console.log(countryDetail);
 
   return (
     <>
