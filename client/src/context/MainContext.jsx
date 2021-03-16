@@ -45,6 +45,8 @@ export const MainContext = ({ children }) => {
     subtitle: 'Travel App',
   }
 
+  const [userMark, setUserMark] = React.useState(0)
+  
   return (
     <Context.Provider value={{
       homePage,
@@ -53,7 +55,9 @@ export const MainContext = ({ children }) => {
       auth,
       firestore,
       location,
-      countries
+      countries,
+      userMark,
+      setUserMark,
     }}>
       {children}
     </Context.Provider>
