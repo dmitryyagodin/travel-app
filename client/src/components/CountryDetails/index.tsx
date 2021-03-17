@@ -143,7 +143,7 @@ export const CountryDetails: React.FC<DetailsItem> = (props) => {
           </div>
         </div>
       </div>
-      <Banner sliderdata={sliderDataItem} selectedLang={langItem} />
+      <Banner sliderdata={sliderDataItem} selectedLang={langItem} countryDetail={countryDetail} />
       <CountryMap countryId={id} language={langItem} />
     </>
   )

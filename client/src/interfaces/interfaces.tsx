@@ -110,6 +110,7 @@ export interface BannerPropsItem {
 export interface BannerProps {
   sliderdata: Array<BannerPropsItem>;
   selectedLang: string;
+  countryDetail: any
 }
 
 export type SelectedLang = 'en' | 'ru' | 'es';

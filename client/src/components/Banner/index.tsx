@@ -9,16 +9,6 @@ import {
   SelectedLang
 } from '../../interfaces/interfaces';
 import { CountryRating } from "../CountryRating";
-import { Context } from "../../context/MainContext";
-import { makeStyles } from "@material-ui/core";
-
-const useStyles = makeStyles({
-  root: {
-    width: 200,
-    display: 'flex',
-    alignItems: 'center',
-  },
-});
 
 const responsive = {
   superLargeDesktop: {
@@ -41,11 +31,10 @@ const responsive = {
 };
 
 const Banner: React.FC<BannerProps> = (props) => {
-  const { userMark, setUserMark } = React.useContext(Context);
-  const classes = useStyles();
   const [modalPicture, setModalPicture] = React.useState('');
   const [open, setOpen] = React.useState(false);
   const selectedLang: SelectedLang = props.selectedLang as SelectedLang;
+  const countryDetail = props.countryDetail
 
   const imageClickHandler = (e: any) => {
     const image: string = props.sliderdata[+e.target.id].picture;
@@ -63,20 +52,22 @@ const Banner: React.FC<BannerProps> = (props) => {
         dotListClass="dots"
       >
         {props.sliderdata.map((el: BannerPropsItem, index: number) => (
-          <div
-            id={index.toString()}
-            className="slide-item"
-            style={{ backgroundImage: `url(${el.picture})` }}
-            key={index}
-            onClick={imageClickHandler}
-          >
-            <div className="slide-item-description">
-              <h3>{el.sightName[selectedLang]}</h3>
-              <p>{el.description[selectedLang]}</p>
+          <div key={index}>
+            <div
+              id={index.toString()}
+              className="slide-item"
+              style={{ backgroundImage: `url(${el.picture})` }}
+
+              onClick={imageClickHandler}
+            >
+              <div className="slide-item-description">
+                <h3>{el.sightName[selectedLang]}</h3>
+                <p>{el.description[selectedLang]}</p>
+              </div>
+              <div className="slide-item-rating">
+              </div>
             </div>
-            <div className="slide-item-rating">
-              <CountryRating />
-            </div>
+            <CountryRating data={countryDetail} sight={el} />
           </div>
         ))}
       </Carousel>
