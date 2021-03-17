@@ -113,4 +113,19 @@ export interface BannerProps {
   countryDetail: any
 }
 
+export interface labelsInterface {
+  [key: number]: string;
+  1: string;
+  2: string;
+  3: string;
+  4: string;
+  5: string;
+}
+
+export interface CountryRatingProps {
+  data: any;
+  sight: any;
+}
+
+
 export type SelectedLang = 'en' | 'ru' | 'es';

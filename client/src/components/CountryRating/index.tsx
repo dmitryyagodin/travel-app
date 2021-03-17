@@ -4,21 +4,7 @@ import Rating from '@material-ui/lab/Rating';
 import { Box } from '@material-ui/core';
 import { Context, fire } from '../../context/MainContext';
 import { Countries } from '../../assets';
-import { CountryItem } from '../../interfaces/interfaces';
-
-interface labelsInterface {
-  [key: number]: string;
-  1: string;
-  2: string;
-  3: string;
-  4: string;
-  5: string;
-}
-
-interface CountryRatingProps {
-  data: any;
-  sight: any;
-}
+import { CountryItem, CountryRatingProps, labelsInterface } from '../../interfaces/interfaces';
 
 const labels: labelsInterface = {
   1: 'Useless',
@@ -35,6 +21,7 @@ export const CountryRating: React.FC<CountryRatingProps> = ({ data, sight }) => 
   const [hover, setHover] = React.useState(-1);
   const [ratings, setRatings] = React.useState<any>([])
   const [avgRating, setAvgRat] = React.useState(0)
+  const [puted, setPuted] = React.useState<boolean>(false)
 
   React.useEffect(() => {
     if (currentContry) {
@@ -55,13 +42,20 @@ export const CountryRating: React.FC<CountryRatingProps> = ({ data, sight }) => 
     setAvgRat(ratings.reduce((acc: any, value: any) => {
       return acc + +value.mark
     }, initValue) / ratings.length)
-  }, [ratings])
+    ratings.forEach((el: any) => {
+      setPuted(true)
+    })
+  }, [ratings, user])
 
-  console.log(ratings);
 
   React.useEffect(() => {
-    setCurrentCountry(Countries.find((el: any) => el.translateTo.ru.countryName === data.countryName))
+    setCurrentCountry(Countries.find((el: any) => el.translateTo.ru.countryName === data.countryName
+      || el.translateTo.en.countryName === data.countryName
+      || el.translateTo.es.countryName === data.countryName
+    ))
   }, [data])
+
+  console.log(data.countryName);
 
 
   const putMarkHandler = (event: any, newValue: any) => {
@@ -87,6 +81,7 @@ export const CountryRating: React.FC<CountryRatingProps> = ({ data, sight }) => 
         value={avgRating}
         precision={1}
         size="large"
+        disabled={(puted && true) || false}
         className="rating"
         onChange={putMarkHandler}
         onChangeActive={(event, newHover) => {
