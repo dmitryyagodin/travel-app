@@ -1,5 +1,5 @@
 # travel-app
-See in on [Netlify](https://dmitryyagodin-travel-app.netlify.app/allcountries)
+See in on [Netlify](https://dmitryyagodin-travel-app.netlify.app)
 
 Clone source code to your local. In your terminal navigate to the root directory.
 
