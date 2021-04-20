@@ -1,0 +1,36 @@
+.widget-container {
+  display: flex;
+  background-color: #e9e9f5;
+  padding: 20px;
+  border-radius: 5px;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s opacity ease-in-out;
+  }
+
+  &.weather {
+    margin-right: 4%;
+  }
+
+  .temperature {
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+  }
+
+  .weather-city {
+    font-size: 20px;
+  }
+
+  .weather-image {
+    margin-left: 10px;
+    width: 60px;
+    height: 60px;
+  }
+}

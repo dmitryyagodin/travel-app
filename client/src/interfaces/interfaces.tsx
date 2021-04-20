@@ -1,0 +1,131 @@
+export interface SightItem {
+  id: number;
+  picture: any;
+  sightName: string;
+  description: string;
+}
+
+export interface LangItem {
+  countryName: string;
+  capitalName: string;
+  lang: string;
+  description: string;
+  sights: Array<SightItem>;
+}
+
+export interface Languages {
+  en: LangItem;
+  ru: LangItem;
+  es: LangItem;
+}
+export interface CountryItem {
+  id: number;
+  picture: any;
+  video: string;
+  translateTo: Languages;
+  lat: string;
+  long: string;
+}
+
+export interface ResultCountryItem {
+  id: number,
+  countryName: string,
+  capitalName: string,
+  picture: string;
+}
+
+export interface CountryItemFirebase {
+  img_title: string,
+  name_ru: string,
+  name_en: string,
+  name_es: string,
+  info_ru: string,
+  info_en: string,
+  info_es: string,
+  capital_ru: string,
+  capital_en: string,
+  capital_es: string,
+  video: string
+}
+
+export interface Params {
+  id: string;
+}
+
+export interface SearchPanelDataItem {
+  handleSearchFromParent: any;
+  langValue: string;
+}
+
+export interface HeaderDataItem {
+  handleSearchValue: any;
+  handleLangValue: any;
+  langValue: string;
+}
+
+export interface HomeItem {
+  searchValue: string;
+  langValue: string;
+}
+
+export interface DetailsItem {
+  langValue: string;
+}
+
+export interface ResultCountryDetailItem {
+  countryName: string,
+  capitalName: string,
+  picture: string;
+  description: string;
+}
+
+export interface SelectLangDataItem {
+  handleLangFromParent: any;
+}
+
+export interface FooterItem {
+  langValue: string;
+}
+
+export interface SignInItem {
+  langValue: string;
+}
+
+export interface SignOutItem {
+  langValue: string;
+}
+
+export interface CountryMapItem {
+  countryId: string;
+  language: string;
+}
+
+export interface BannerPropsItem {
+  id: string;
+  picture: string;
+  sightName: Languages;
+  description: Languages;
+}
+
+export interface BannerProps {
+  sliderdata: Array<BannerPropsItem>;
+  selectedLang: string;
+  countryDetail: any
+}
+
+export interface labelsInterface {
+  [key: number]: string;
+  1: string;
+  2: string;
+  3: string;
+  4: string;
+  5: string;
+}
+
+export interface CountryRatingProps {
+  data: any;
+  sight: any;
+}
+
+
+export type SelectedLang = 'en' | 'ru' | 'es';
